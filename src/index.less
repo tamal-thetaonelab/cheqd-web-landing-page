@@ -1,0 +1,192 @@
+// Global styles
+@import "./app.theme.less";
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+:root {
+  font-family: "Quicksand", sans-serif;
+}
+
+// Export Less variables as css variables
+// see antd/es/style/themes/default.less
+:root {
+  --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  // COLOR
+  --primary-color: @primary-color;
+  --info-color: @info-color;
+  --success-color: @success-color;
+  --processing-color: @processing-color;
+  --error-color: @error-color;
+  --highlight-color: @highlight-color;
+  --warning-color: @warning-color;
+  --normal-color: @normal-color;
+  --grey-1: @grey-1;
+  --grey-2: @grey-2;
+  --grey-3: @grey-3;
+  --grey-4: @grey-4;
+
+  --primary-5: @primary-5;
+
+  // Specific colors
+  --white-color: @white;
+  --text-color: @text-color; //fade(@black, 85%);
+  --text-color-secondary: @text-color-secondary; //fade(@black, 45%);
+  --text-color-inverse: @text-color-inverse; //@white;
+  --icon-color: @icon-color; //inherit;
+  --icon-color-hover: @icon-color-hover; //fade(@black, 75%);
+  // Disabled states
+  --disabled-color: @disabled-color; // fade(#000, 25%);
+  --disabled-bg: @disabled-bg; // @background-color-base;
+  --disabled-color-dark: @disabled-color-dark; // fade(#fff, 35%);
+
+  --component-background: @component-background; // #fff
+  --component-background-hover: @component-background-hover;
+  // #e0e0e0
+  --tag-color-overdue: @overDueTag;
+  --tag-color-pending: @pendingTagColor;
+  --tag-color-zero: @ZeroTagColor;
+  // Font Weight
+  --title-font-weight: @typography-title-font-weight;
+
+  // Border radius
+  --border-radius-sm: @border-radius-sm; // 2px
+  --border-radius-base: @border-radius-base; // 6px
+  --border-radius-md: @border-radius-md; // 8px
+  --border-radius-lg: @border-radius-lg; // 16px
+
+  // vertical paddings
+  --padding-lg: @padding-lg; //: 24px; // containers
+  --padding-md: @padding-md; //: 16px; // small containers and buttons
+  --padding-sm: @padding-sm; //: 12px; // Form controls and items
+  --padding-xs: @padding-xs; //: 8px; // small items
+  --padding-xss: @padding-xss; //: 4px; // more small
+
+  // vertical margins
+  --margin-xxl: 64px;
+  --margin-lg: @margin-lg; //: 24px; // containers
+  --margin-md: @margin-md; //: 16px; // small containers and buttons
+  --margin-sm: @margin-sm; //: 12px; // Form controls and items
+  --margin-xs: @margin-xs; //: 8px; // small items
+  --margin-xss: @margin-xss; //: 4px; // more small
+
+  // Font Size
+  --font-size-base: @font-size-base; // 14px;
+  --font-size-lg: @font-size-lg; // @font-size-base + 2px;
+  --font-size-sm: @font-size-sm; // 12px;
+  --heading-1-size: @heading-1-size; // ceil(@font-size-base * 2.71);
+  --heading-2-size: @heading-2-size; // ceil(@font-size-base * 2.14);
+  --heading-3-size: @heading-3-size; // ceil(@font-size-base * 1.71);
+  --heading-4-size: @heading-4-size; // ceil(@font-size-base * 1.42);
+  --heading-5-size: @heading-5-size; // ceil(@font-size-base * 1.14);
+
+  --heading-3-line-height: 1.35;
+
+  // Media queries breakpoints
+  // Extra small screen / phone
+  --screen-xs: @screen-xs; //: 480px;
+  // Small screen / tablet
+  --screen-sm: @screen-sm; //: 576px;
+  // Medium screen / desktop
+  --screen-md: @screen-md; //: 768px;
+  // Large screen / wide desktop
+  --screen-lg: @screen-lg; //: 992px;
+  // Extra large screen / full hd
+  --screen-xl: @screen-xl; //: 1200px;
+  // Extra extra large screen / large desktop
+  --screen-xxl: @screen-xxl; //: 1600px;
+}
+
+// Deep Ant Design Overrides
+
+// START MODAL
+.ant-modal-content {
+  border-radius: var(--border-radius-lg) !important;
+}
+
+.ant-modal-header {
+  border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0 !important;
+}
+
+.ant-modal-title {
+  margin-bottom: 0;
+  color: @grey-2 !important;
+  font-weight: 600 !important;
+  font-size: 24px !important;
+  line-height: 1.35;
+}
+.ant-modal-body {
+  padding-top: 12px !important;
+}
+.ant-modal-mask,
+.ant-image-preview-mask {
+  background-color: rgba(0, 0, 0, 0) !important;
+  filter: alpha(opacity=0) !important;
+}
+
+// START TABLE
+
+.ant-table {
+  &-thead {
+    > tr {
+      > th {
+        font-weight: 600 !important;
+        border-bottom: @border-width-base @border-style-base @grey-3 !important;
+      }
+    }
+  }
+}
+
+// START TAB
+
+.ant-tabs-tab-btn {
+  font-weight: 600 !important;
+}
+
+// START FORM
+
+.ant-row.ant-form-item {
+  margin-bottom: @margin-md;
+}
+
+.ant-col.ant-form-item-label {
+  text-align: left;
+  flex-basis: 100%;
+  max-width: 100%;
+  label {
+    color: @grey-2 !important;
+    font-size: @font-size-sm!important;
+  }
+
+  & > label::after {
+    content: "" !important;
+  }
+}
+
+.ant-form-item-has-error {
+  margin-bottom: 0px !important;
+}
+
+.ant-input-prefix {
+  margin-right: 10px !important;
+}
+
+.ant-menu-item.ant-menu-item-only-child:not(.bail) {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+.anticon.anticon-comment,
+.anticon.anticon-setting {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.modal-headless .ant-modal-header {
+  display: none !important;
+}
+
+.ant-collapse > .ant-collapse-item:last-child,
+.ant-collapse > .ant-collapse-item:last-child > .ant-collapse-header {
+  border-radius: 0 0 0 0 !important;
+}

@@ -1,0 +1,258 @@
+[
+  {
+    "title": "Free",
+    "price": 0,
+    "highlighted": true,
+    "shouldDisplayButton": true,
+    "details": [
+      {
+        "measureUnit": "Employee (#count)",
+        "measure": 10
+      },
+      {
+        "measureUnit": "Payroll + automated TDS computation",
+        "measure": "No"
+      },
+      {
+        "measureUnit": "Employee reimbursement",
+        "measure": "No"
+      },
+      {
+        "measureUnit": "Invoice, expense",
+        "measure": "Yes"
+      },
+      {
+        "measureUnit": "Vendor management",
+        "measure": "Yes"
+      },
+      {
+        "measureUnit": "Pdf / image offline bill scan",
+        "measure": "5 per month"
+      },
+      {
+        "measureUnit": "Inventory management",
+        "measure": "Coming soon"
+      },
+      {
+        "measureUnit": "Bank statement reconciliation (#entries)",
+        "measure": "20 per month"
+      },
+      {
+        "measureUnit": "TDS (24Q & 26Q) RPU download",
+        "measure": "No"
+      },
+      {
+        "measureUnit": "GSTR JSON Download",
+        "measure": "No"
+      },
+      {
+        "measureUnit": "Sync to/from TALLY",
+        "measure": "No"
+      },
+      {
+        "measureUnit": "GST reconciliation",
+        "measure": "Yes"
+      },
+      {
+        "measureUnit": "Provide access to CA",
+        "measure": "Yes"
+      },
+      {
+        "measureUnit": "Support",
+        "measure": "No"
+      }
+    ]
+  },
+  {
+    "title": "Basic",
+    "price": 599,
+    "highlighted": false,
+    "showButton": false,
+    "details": [
+      {
+        "measureUnit": "Employee (#count)",
+        "measure": 25
+      },
+      {
+        "measureUnit": "Payroll + automated TDS computation",
+        "measure": "No"
+      },
+      {
+        "measureUnit": "Employee reimbursement",
+        "measure": "No"
+      },
+      {
+        "measureUnit": "Invoice, expense",
+        "measure": "Yes"
+      },
+      {
+        "measureUnit": "Vendor management",
+        "measure": "Yes"
+      },
+      {
+        "measureUnit": "Pdf / image offline bill scan",
+        "measure": "15 per month"
+      },
+      {
+        "measureUnit": "Inventory management",
+        "measure": "Coming soon"
+      },
+      {
+        "measureUnit": "Bank statement reconciliation (#entries)",
+        "measure": "50 per month"
+      },
+      {
+        "measureUnit": "TDS (24Q & 26Q) RPU download",
+        "measure": "No"
+      },
+      {
+        "measureUnit": "GSTR JSON Download",
+        "measure": "No"
+      },
+      {
+        "measureUnit": "Sync to/from TALLY",
+        "measure": "No"
+      },
+      {
+        "measureUnit": "GST reconciliation",
+        "measure": "Yes"
+      },
+      {
+        "measureUnit": "Provide access to CA",
+        "measure": "Yes"
+      },
+      {
+        "measureUnit": "Support",
+        "measure": "Email"
+      }
+    ]
+  },
+  {
+    "title": "Regular",
+    "price": 699,
+    "highlighted": true,
+    "showButton": true,
+    "details": [
+      {
+        "measureUnit": "Employee (#count)",
+        "measure": 40
+      },
+      {
+        "measureUnit": "Payroll + automated TDS computation",
+        "measure": "Yes"
+      },
+      {
+        "measureUnit": "Employee reimbursement",
+        "measure": "Yes"
+      },
+      {
+        "measureUnit": "Invoice, expense",
+        "measure": "Yes"
+      },
+      {
+        "measureUnit": "Vendor management",
+        "measure": "Yes"
+      },
+      {
+        "measureUnit": "Pdf / image offline bill scan",
+        "measure": "50 per month"
+      },
+      {
+        "measureUnit": "Inventory management",
+        "measure": "Coming soon"
+      },
+      {
+        "measureUnit": "Bank statement reconciliation (#entries)",
+        "measure": "600 per month"
+      },
+      {
+        "measureUnit": "TDS (24Q & 26Q) RPU download",
+        "measure": "Yes"
+      },
+      {
+        "measureUnit": "GSTR JSON Download",
+        "measure": "Yes"
+      },
+      {
+        "measureUnit": "Sync to/from TALLY",
+        "measure": "Yes"
+      },
+      {
+        "measureUnit": "GST reconciliation",
+        "measure": "Yes"
+      },
+      {
+        "measureUnit": "Provide access to CA",
+        "measure": "Yes"
+      },
+      {
+        "measureUnit": "Support",
+        "measure": "Email"
+      }
+    ]
+  },
+  {
+    "title": "Prime",
+    "price": 2499,
+    "highlighted": false,
+    "showButton": false,
+    "details": [
+      {
+        "measureUnit": "Employee (#count)",
+        "measure": 150
+      },
+      {
+        "measureUnit": "Payroll + automated TDS computation",
+        "measure": "Yes"
+      },
+      {
+        "measureUnit": "Employee reimbursement",
+        "measure": "Yes"
+      },
+      {
+        "measureUnit": "Invoice, expense",
+        "measure": "Yes"
+      },
+      {
+        "measureUnit": "Vendor management",
+        "measure": "Yes"
+      },
+      {
+        "measureUnit": "Pdf / image offline bill scan",
+        "measure": "400 per month"
+      },
+      {
+        "measureUnit": "Inventory management",
+        "measure": "Coming soon"
+      },
+      {
+        "measureUnit": "Bank statement reconciliation (#entries)",
+        "measure": "5000 per month"
+      },
+      {
+        "measureUnit": "TDS (24Q & 26Q) RPU download",
+        "measure": "Yes"
+      },
+      {
+        "measureUnit": "GSTR JSON Download",
+        "measure": "Yes"
+      },
+      {
+        "measureUnit": "Sync to/from TALLY",
+        "measure": "Yes"
+      },
+      {
+        "measureUnit": "GST reconciliation",
+        "measure": "Yes"
+      },
+      {
+        "measureUnit": "Provide access to CA",
+        "measure": "Yes"
+      },
+      {
+        "measureUnit": "Support",
+        "measure": "Email + Call"
+      }
+    ]
+  }
+]

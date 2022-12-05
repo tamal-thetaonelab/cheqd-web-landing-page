@@ -1,0 +1,44 @@
+{
+  "extends": [
+    "tslint:recommended",
+    "tslint-react",
+    "tslint-config-prettier"
+  ],
+  "rulesDirectory": [
+    "tslint-plugin-prettier"
+  ],
+  "rules": {
+    "prettier": true,
+    "interface-name": false,
+    "variable-name": {
+      "severity": "warn",
+      "options": [
+        "require-const-for-all-caps",
+        "ban-keywords",
+        "allow-leading-underscore",
+        "allow-snake-case"
+      ]
+    },
+    "no-shadowed-variable": {
+      "severity": "warn"
+    },
+    "jsx-boolean-value": false,
+    "jsx-no-lambda": {
+      "severity": "warn"
+    },
+    "no-debugger": [
+      true
+    ],
+    "array-type": [
+      true,
+      "generic"
+    ],
+    "no-console": {
+      "severity": "error",
+      "options": [
+        "log",
+        "debug"
+      ]
+    }
+  }
+}

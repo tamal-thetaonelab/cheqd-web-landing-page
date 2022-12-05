@@ -1,0 +1,25 @@
+.form :global(label) {
+  font-weight: 700;
+}
+
+.submitBtn {
+  width: 100%;
+}
+
+.errorSpace {
+  margin-top: var(--margin-sm);
+  min-height: calc(var(--font-size-base) + 8px);
+  font-size: var(--font-size-base);
+  color: var(--error-color);
+}
+.frgetPass {
+  cursor: pointer;
+  color: blue;
+  margin-top: 6px;
+}
+
+.frgetPasslabel {
+  margin-bottom: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
