@@ -107,10 +107,9 @@ class LandingLayout extends Component<Props> {
                 className={styles.blockWrap}
                 showSignupModal={()=>{}}
               />
-              {/* <PricingBlock
+              <PricingBlock
                 history={this.props.history}
-               
-              /> */}
+              />
               <FinalBlock showSignUpModal={()=>{}} />
             </div>
             <Footer />

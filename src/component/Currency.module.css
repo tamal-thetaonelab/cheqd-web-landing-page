@@ -1,0 +1,10 @@
+.currency {
+  width: 100%;
+  text-align: right;
+}
+.currency::before {
+  content: attr(data-symbol);
+  display: inline;
+  margin-right: var(--margin-xss);
+  font-family: var(--font-system);
+}

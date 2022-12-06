@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Row, Col, Card, Button, Typography, notification } from "antd";
-import styles from "../../../src/feature/settings-membership/SettingsMembership.module.css";
+import styles from "~/component/SettingsMembership.module.css";
 import Currency from "~/component/Currency";
 /* import { getPlanFeature } from "~/api/license"; */
 /* import {
@@ -12,6 +12,7 @@ import { connect, ConnectedProps } from "react-redux";
 import { registerEvent } from "~/analytics";
 
 import * as ga from "~/contants/gaConstants";
+import { RenderPlanSingle } from "~/component/PlanSingle";
 
 /* const mapStateToProps = (_state: StoreState) => ({});
 const mapDispatchToProps = (dispatch: StoreDispatch) => ({
@@ -32,6 +33,8 @@ interface State {
   planList: any;
   userData: any;
   loadData: boolean;
+
+  showAllPlans: boolean;
 }
 
 type PlanData = {
@@ -47,6 +50,7 @@ class PricingBlock extends Component<Props, {}> {
     planList: [],
     userData: {},
     loadData: true,
+    showAllPlans: false,
   };
 
   handeleMonthly = (e: any) => {
@@ -69,7 +73,18 @@ class PricingBlock extends Component<Props, {}> {
     /* this.props.showSignUpModal(); */
   };
 
-  loadPlan = async () => {/* 
+  loadPlan = async () => {
+    const plans = require("./pricing.json");
+    plans.forEach((plan: any) => {
+      plan.licenses.forEach((license: any) => {
+        license.term = license.period === "30 days" ? "MONTHLY" : "ANNUAL";
+      });
+    });
+    this.setState({
+      planList: plans,
+      loadData: false,
+    });
+    /* 
     const { ok, message, json } = await getPlanFeature();
     if (!ok) {
       notification.warning({
@@ -111,6 +126,7 @@ class PricingBlock extends Component<Props, {}> {
                   value="false"
                   type="radio"
                   checked={this.state.activeTerm === "ANNUAL"}
+                  defaultChecked
                 />
                 <label
                   htmlFor="toggle-on"
@@ -140,86 +156,31 @@ class PricingBlock extends Component<Props, {}> {
             <div className={`site-card-wrapper ${styles.wrap}`}>
               <Row className={styles.planCardWrapper} gutter={46}>
                 {this.state.planList.map((plan: any, planIndex: number) => {
-                  const license = plan.licenses.find(
+                  if (!this.state.showAllPlans && planIndex >= 3) {
+                    // Only show 3 plans if collapsed
+                    return false;
+                  }
+                  if (!plan.display_on_ui) {
+                    return false;
+                  }
+
+                  const periodBasedPlan = plan.licenses.find(
                     (it: any) => it.term === this.state.activeTerm
                   );
-                  if (!license) {
+                  if (!periodBasedPlan) {
                     return false;
                   }
                   return (
-                    <Col
-                      key={plan.id}
-                      className={styles.cardColumn}
-                      // sm={16} md={10}
-                      lg={8}
-                    >
-                      <Card
-                        title={plan.name}
-                        className={styles.cardColumn}
-                        bordered={false}
-                      >
-                        <div className={styles.cardContent}>
-                          {plan.description}
-                        </div>
-                        {!!license.discount_rate && (
-                          <div className={styles.offWrap}>
-                            <div className={styles.off}>
-                              {" "}
-                              {license.discount_rate}% off | &nbsp;
-                            </div>
-                            <div
-                              className={styles.oriPrice}
-                              style={{
-                                color: "var(--processing-color)",
-                                textDecoration: "line-through",
-                              }}
-                            >
-                              <Currency className={styles.currency} roundoff>
-                                {license.mrp_amount}
-                              </Currency>
-                            </div>
-                          </div>
-                        )}
-                        <div className={styles.cost}>
-                          {" "}
-                          ₹{license.discounted_amount}/
-                          {this.state.activeTerm === "ANNUAL"
-                            ? "year"
-                            : "month"}
-                        </div>
-                        <div className={styles.btnWrap}>
-                          <Button
-                            type="primary"
-                            className={styles.activePlanBtn}
-                            onClick={this.handleStart}
-                          >
-                            Activate
-                          </Button>
-                        </div>
-
-                        <div className={styles.sec}>
-                          {license.features.map((detail: any, idx: number) => {
-                            return (
-                              <p key={idx}>
-                                <span>{detail.is_active ? "✔" : "✖"}</span>
-                                &nbsp;{detail.feature}
-                              </p>
-                            );
-                          })}
-                        </div>
-                        {plan.is_active_plan ? (
-                          <div
-                            className={`${styles.btnWrap} ${styles.cancelwrap}`}
-                          >
-                            <Button type="link" className={styles.cancelBtn}>
-                              Cancel
-                            </Button>
-                          </div>
-                        ) : (
-                          <></>
-                        )}
-                      </Card>
-                    </Col>
+                    <RenderPlanSingle
+                      key={`${Math.random()}`}
+                      plan={plan}
+                      license={periodBasedPlan}
+                      activeTerm={this.state.activeTerm}
+                      purchaseMode={true}
+                      currentPlanStatus="Activate"
+                      isPurchaseEnabled={false}
+                      /* handleActivate={this.handleActivate} */
+                    />
                   );
                 })}
               </Row>

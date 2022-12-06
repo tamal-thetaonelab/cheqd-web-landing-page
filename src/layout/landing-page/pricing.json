@@ -1,257 +1,382 @@
 [
   {
-    "title": "Free",
-    "price": 0,
-    "highlighted": true,
-    "shouldDisplayButton": true,
-    "details": [
+    "id": 1,
+    "name": "Small Biz",
+    "description": "Run all your business operations from a single platform. Securely allow your CA to access your data. \n      Track compliances in realtime. Add an unlimited number of users.",
+    "free_trial_days": 0,
+    "client_no": 0,
+    "display_on_ui": true,
+    "licenses": [
       {
-        "measureUnit": "Employee (#count)",
-        "measure": 10
+        "period": "30 days",
+        "plan_id": "plan_JGT5KHY90bpAZb",
+        "mrp_amount": 300,
+        "discount_rate": 0,
+        "license_details_id": 1,
+        "features": [
+          { "feature": "Gst billing", "is_active": true },
+          {
+            "feature": "AI based physical receipt scanning",
+            "is_active": true
+          },
+          { "feature": "Employee management & payroll", "is_active": true },
+          { "feature": "Employee reimbursements", "is_active": true },
+          { "feature": "Data import from Tally & excel", "is_active": true },
+          { "feature": "Phone & email support", "is_active": true }
+        ],
+        "discounted_amount": 300
       },
       {
-        "measureUnit": "Payroll + automated TDS computation",
-        "measure": "No"
-      },
-      {
-        "measureUnit": "Employee reimbursement",
-        "measure": "No"
-      },
-      {
-        "measureUnit": "Invoice, expense",
-        "measure": "Yes"
-      },
-      {
-        "measureUnit": "Vendor management",
-        "measure": "Yes"
-      },
-      {
-        "measureUnit": "Pdf / image offline bill scan",
-        "measure": "5 per month"
-      },
-      {
-        "measureUnit": "Inventory management",
-        "measure": "Coming soon"
-      },
-      {
-        "measureUnit": "Bank statement reconciliation (#entries)",
-        "measure": "20 per month"
-      },
-      {
-        "measureUnit": "TDS (24Q & 26Q) RPU download",
-        "measure": "No"
-      },
-      {
-        "measureUnit": "GSTR JSON Download",
-        "measure": "No"
-      },
-      {
-        "measureUnit": "Sync to/from TALLY",
-        "measure": "No"
-      },
-      {
-        "measureUnit": "GST reconciliation",
-        "measure": "Yes"
-      },
-      {
-        "measureUnit": "Provide access to CA",
-        "measure": "Yes"
-      },
-      {
-        "measureUnit": "Support",
-        "measure": "No"
+        "period": "365 days",
+        "plan_id": "plan_JGTI40mBig2qca",
+        "mrp_amount": 3600,
+        "discount_rate": 22,
+        "license_details_id": 4,
+        "features": [
+          { "feature": "Gst billing", "is_active": true },
+          {
+            "feature": "AI based physical receipt scanning",
+            "is_active": true
+          },
+          { "feature": "Employee management & payroll", "is_active": true },
+          { "feature": "Employee reimbursements", "is_active": true },
+          { "feature": "Data import from Tally & excel", "is_active": true },
+          { "feature": "Phone & email support", "is_active": true }
+        ],
+        "discounted_amount": 2808
       }
     ]
   },
   {
-    "title": "Basic",
-    "price": 599,
-    "highlighted": false,
-    "showButton": false,
-    "details": [
+    "id": 2,
+    "name": "Professional - 1",
+    "description": "Manage your clients compliances from a single platform. Add an unlimited number of team members.",
+    "free_trial_days": 0,
+    "client_no": 10,
+    "display_on_ui": true,
+    "licenses": [
       {
-        "measureUnit": "Employee (#count)",
-        "measure": 25
+        "period": "365 days",
+        "plan_id": "plan_JGTCpCBCM7TLdm",
+        "mrp_amount": 7080,
+        "discount_rate": 22,
+        "license_details_id": 3,
+        "features": [
+          { "feature": "10 clients", "is_active": true },
+          { "feature": "All small-biz features", "is_active": true },
+          { "feature": "Unlimited number of users", "is_active": true },
+          {
+            "feature": "Customization on request (billed separately)",
+            "is_active": true
+          },
+          { "feature": "Phone & email support", "is_active": true }
+        ],
+        "discounted_amount": 5522
       },
       {
-        "measureUnit": "Payroll + automated TDS computation",
-        "measure": "No"
-      },
-      {
-        "measureUnit": "Employee reimbursement",
-        "measure": "No"
-      },
-      {
-        "measureUnit": "Invoice, expense",
-        "measure": "Yes"
-      },
-      {
-        "measureUnit": "Vendor management",
-        "measure": "Yes"
-      },
-      {
-        "measureUnit": "Pdf / image offline bill scan",
-        "measure": "15 per month"
-      },
-      {
-        "measureUnit": "Inventory management",
-        "measure": "Coming soon"
-      },
-      {
-        "measureUnit": "Bank statement reconciliation (#entries)",
-        "measure": "50 per month"
-      },
-      {
-        "measureUnit": "TDS (24Q & 26Q) RPU download",
-        "measure": "No"
-      },
-      {
-        "measureUnit": "GSTR JSON Download",
-        "measure": "No"
-      },
-      {
-        "measureUnit": "Sync to/from TALLY",
-        "measure": "No"
-      },
-      {
-        "measureUnit": "GST reconciliation",
-        "measure": "Yes"
-      },
-      {
-        "measureUnit": "Provide access to CA",
-        "measure": "Yes"
-      },
-      {
-        "measureUnit": "Support",
-        "measure": "Email"
+        "period": "30 days",
+        "plan_id": "plan_JGSGSYbExFBRWq",
+        "mrp_amount": 590,
+        "discount_rate": 0,
+        "license_details_id": 2,
+        "features": [
+          { "feature": "10 clients", "is_active": true },
+          { "feature": "All small-biz features", "is_active": true },
+          { "feature": "Unlimited number of users", "is_active": true },
+          {
+            "feature": "Customization on request (billed separately)",
+            "is_active": true
+          },
+          { "feature": "Phone & email support", "is_active": true }
+        ],
+        "discounted_amount": 590
       }
     ]
   },
   {
-    "title": "Regular",
-    "price": 699,
-    "highlighted": true,
-    "showButton": true,
-    "details": [
+    "id": 3,
+    "name": "Professional - 2",
+    "description": "Manage your clients compliances from a single platform. Add an unlimited number of team members.",
+    "free_trial_days": 0,
+    "client_no": 25,
+    "display_on_ui": true,
+    "licenses": [
       {
-        "measureUnit": "Employee (#count)",
-        "measure": 40
+        "period": "30 days",
+        "plan_id": "plan_JPYUDZKKD71NzY",
+        "mrp_amount": 1180,
+        "discount_rate": 0,
+        "license_details_id": 5,
+        "features": [
+          { "feature": "25 clients", "is_active": true },
+          { "feature": "All small-biz features", "is_active": true },
+          { "feature": "Unlimited number of users", "is_active": true },
+          {
+            "feature": "Customization on request (billed separately)",
+            "is_active": true
+          },
+          { "feature": "Phone & email support", "is_active": true }
+        ],
+        "discounted_amount": 1180
       },
       {
-        "measureUnit": "Payroll + automated TDS computation",
-        "measure": "Yes"
-      },
-      {
-        "measureUnit": "Employee reimbursement",
-        "measure": "Yes"
-      },
-      {
-        "measureUnit": "Invoice, expense",
-        "measure": "Yes"
-      },
-      {
-        "measureUnit": "Vendor management",
-        "measure": "Yes"
-      },
-      {
-        "measureUnit": "Pdf / image offline bill scan",
-        "measure": "50 per month"
-      },
-      {
-        "measureUnit": "Inventory management",
-        "measure": "Coming soon"
-      },
-      {
-        "measureUnit": "Bank statement reconciliation (#entries)",
-        "measure": "600 per month"
-      },
-      {
-        "measureUnit": "TDS (24Q & 26Q) RPU download",
-        "measure": "Yes"
-      },
-      {
-        "measureUnit": "GSTR JSON Download",
-        "measure": "Yes"
-      },
-      {
-        "measureUnit": "Sync to/from TALLY",
-        "measure": "Yes"
-      },
-      {
-        "measureUnit": "GST reconciliation",
-        "measure": "Yes"
-      },
-      {
-        "measureUnit": "Provide access to CA",
-        "measure": "Yes"
-      },
-      {
-        "measureUnit": "Support",
-        "measure": "Email"
+        "period": "365 days",
+        "plan_id": "plan_JPYTM6kfDt4fWa",
+        "mrp_amount": 14160,
+        "discount_rate": 22,
+        "license_details_id": 6,
+        "features": [
+          { "feature": "25 clients", "is_active": true },
+          { "feature": "All small-biz features", "is_active": true },
+          { "feature": "Unlimited number of users", "is_active": true },
+          {
+            "feature": "Customization on request (billed separately)",
+            "is_active": true
+          },
+          { "feature": "Phone & email support", "is_active": true }
+        ],
+        "discounted_amount": 11044
       }
     ]
   },
   {
-    "title": "Prime",
-    "price": 2499,
-    "highlighted": false,
-    "showButton": false,
-    "details": [
+    "id": 40,
+    "name": "Professional - 3",
+    "description": "Manage your clients compliances from a single platform. Add an unlimited number of team members.",
+    "free_trial_days": 0,
+    "client_no": 60,
+    "display_on_ui": true,
+    "licenses": [
       {
-        "measureUnit": "Employee (#count)",
-        "measure": 150
+        "period": "365 days",
+        "plan_id": "plan_KllXnTuVTVPKPY",
+        "mrp_amount": 33984,
+        "discount_rate": 22,
+        "license_details_id": 63,
+        "features": [
+          { "feature": "60 clients", "is_active": true },
+          { "feature": "All small-biz features", "is_active": true },
+          { "feature": "Unlimited number of users", "is_active": true },
+          {
+            "feature": "Customization on request (billed separately)",
+            "is_active": true
+          },
+          { "feature": "Phone & email support", "is_active": true }
+        ],
+        "discounted_amount": 26507
       },
       {
-        "measureUnit": "Payroll + automated TDS computation",
-        "measure": "Yes"
+        "period": "30 days",
+        "plan_id": "plan_KllWi6bl80Vhr4",
+        "mrp_amount": 2832,
+        "discount_rate": 0,
+        "license_details_id": 62,
+        "features": [
+          { "feature": "60 clients", "is_active": true },
+          { "feature": "All small-biz features", "is_active": true },
+          { "feature": "Unlimited number of users", "is_active": true },
+          {
+            "feature": "Customization on request (billed separately)",
+            "is_active": true
+          },
+          { "feature": "Phone & email support", "is_active": true }
+        ],
+        "discounted_amount": 2832
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Professional - 4",
+    "description": "Manage your clients compliances from a single platform. Add an unlimited number of team members.",
+    "free_trial_days": 0,
+    "client_no": 150,
+    "display_on_ui": true,
+    "licenses": [
+      {
+        "period": "365 days",
+        "plan_id": "plan_KllYyugIyrC5nQ",
+        "mrp_amount": 84960,
+        "discount_rate": 22,
+        "license_details_id": 65,
+        "features": [
+          { "feature": "150 clients", "is_active": true },
+          { "feature": "All small-biz features", "is_active": true },
+          { "feature": "Unlimited number of users", "is_active": true },
+          {
+            "feature": "Customization on request (billed separately)",
+            "is_active": true
+          },
+          { "feature": "Phone & email support", "is_active": true }
+        ],
+        "discounted_amount": 66268
       },
       {
-        "measureUnit": "Employee reimbursement",
-        "measure": "Yes"
+        "period": "30 days",
+        "plan_id": "plan_KllYJD3XU2ra9l",
+        "mrp_amount": 7080,
+        "discount_rate": 0,
+        "license_details_id": 64,
+        "features": [
+          { "feature": "150 clients", "is_active": true },
+          { "feature": "All small-biz features", "is_active": true },
+          { "feature": "Unlimited number of users", "is_active": true },
+          {
+            "feature": "Customization on request (billed separately)",
+            "is_active": true
+          },
+          { "feature": "Phone & email support", "is_active": true }
+        ],
+        "discounted_amount": 7080
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Professional - 5",
+    "description": "Manage your clients compliances from a single platform. Add an unlimited number of team members.",
+    "free_trial_days": 0,
+    "client_no": 250,
+    "display_on_ui": true,
+    "licenses": [
+      {
+        "period": "30 days",
+        "plan_id": "plan_KllZPel0cI0qo4",
+        "mrp_amount": 11800,
+        "discount_rate": 0,
+        "license_details_id": 66,
+        "features": [
+          { "feature": "250 clients", "is_active": true },
+          { "feature": "All small-biz features", "is_active": true },
+          { "feature": "Unlimited number of users", "is_active": true },
+          {
+            "feature": "Customization on request (billed separately)",
+            "is_active": true
+          },
+          { "feature": "Phone & email support", "is_active": true }
+        ],
+        "discounted_amount": 11800
       },
       {
-        "measureUnit": "Invoice, expense",
-        "measure": "Yes"
+        "period": "365 days",
+        "plan_id": "plan_KllZpdrMD1AxvU",
+        "mrp_amount": 141600,
+        "discount_rate": 22,
+        "license_details_id": 67,
+        "features": [
+          { "feature": "250 clients", "is_active": true },
+          { "feature": "All small-biz features", "is_active": true },
+          { "feature": "Unlimited number of users", "is_active": true },
+          {
+            "feature": "Customization on request (billed separately)",
+            "is_active": true
+          },
+          { "feature": "Phone & email support", "is_active": true }
+        ],
+        "discounted_amount": 110448
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Professional - 6",
+    "description": "Manage your clients compliances from a single platform. Add an unlimited number of team members.",
+    "free_trial_days": 0,
+    "client_no": 600,
+    "display_on_ui": true,
+    "licenses": [
+      {
+        "period": "30 days",
+        "plan_id": "plan_KllaKr15oNfarZ",
+        "mrp_amount": 14160,
+        "discount_rate": 0,
+        "license_details_id": 68,
+        "features": [
+          { "feature": "600 clients", "is_active": true },
+          { "feature": "All small-biz features", "is_active": true },
+          { "feature": "Unlimited number of users", "is_active": true },
+          {
+            "feature": "Customization on request (billed separately)",
+            "is_active": true
+          },
+          { "feature": "Phone & email support", "is_active": true }
+        ],
+        "discounted_amount": 14160
       },
       {
-        "measureUnit": "Vendor management",
-        "measure": "Yes"
-      },
+        "period": "365 days",
+        "plan_id": "plan_Kllb3hckV9g22Q",
+        "mrp_amount": 169920,
+        "discount_rate": 22,
+        "license_details_id": 69,
+        "features": [
+          { "feature": "600 clients", "is_active": true },
+          { "feature": "All small-biz features", "is_active": true },
+          { "feature": "Unlimited number of users", "is_active": true },
+          {
+            "feature": "Customization on request (billed separately)",
+            "is_active": true
+          },
+          { "feature": "Phone & email support", "is_active": true }
+        ],
+        "discounted_amount": 132537
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Free trial (Small Biz)",
+    "description": "-",
+    "free_trial_days": 30,
+    "client_no": 0,
+    "display_on_ui": false,
+    "licenses": [
       {
-        "measureUnit": "Pdf / image offline bill scan",
-        "measure": "400 per month"
-      },
+        "period": "30 days",
+        "plan_id": "plan_mmsbfreetrial001",
+        "mrp_amount": 300,
+        "discount_rate": 0,
+        "license_details_id": 70,
+        "features": [
+          { "feature": "Gst billing", "is_active": true },
+          {
+            "feature": "AI based physical receipt scanning",
+            "is_active": true
+          },
+          { "feature": "Employee management & payroll", "is_active": true },
+          { "feature": "Employee reimbursements", "is_active": true },
+          { "feature": "Data import from Tally & excel", "is_active": true },
+          { "feature": "Phone & email support", "is_active": true }
+        ],
+        "discounted_amount": 300
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Free trial (Professional)",
+    "description": "-",
+    "free_trial_days": 30,
+    "client_no": 25,
+    "display_on_ui": false,
+    "licenses": [
       {
-        "measureUnit": "Inventory management",
-        "measure": "Coming soon"
-      },
-      {
-        "measureUnit": "Bank statement reconciliation (#entries)",
-        "measure": "5000 per month"
-      },
-      {
-        "measureUnit": "TDS (24Q & 26Q) RPU download",
-        "measure": "Yes"
-      },
-      {
-        "measureUnit": "GSTR JSON Download",
-        "measure": "Yes"
-      },
-      {
-        "measureUnit": "Sync to/from TALLY",
-        "measure": "Yes"
-      },
-      {
-        "measureUnit": "GST reconciliation",
-        "measure": "Yes"
-      },
-      {
-        "measureUnit": "Provide access to CA",
-        "measure": "Yes"
-      },
-      {
-        "measureUnit": "Support",
-        "measure": "Email + Call"
+        "period": "30 days",
+        "plan_id": "plan_mmp2freetrial001",
+        "mrp_amount": 590,
+        "discount_rate": 0,
+        "license_details_id": 71,
+        "features": [
+          { "feature": "25 clients", "is_active": true },
+          { "feature": "All small-biz features", "is_active": true },
+          { "feature": "Unlimited number of users", "is_active": true },
+          {
+            "feature": "Customization on request (billed separately)",
+            "is_active": true
+          },
+          { "feature": "Phone & email support", "is_active": true }
+        ],
+        "discounted_amount": 590
       }
     ]
   }
