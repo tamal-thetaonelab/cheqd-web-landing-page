@@ -1,3 +1,7 @@
 ### Commands to run
-```npm i```
-```npm start```
+Make sure you  are on Node `v14.17.0`
+After that run 
+- ```npm i```
+- ```npm start```
+
+The relevant starting point is `src/layout/landing-page/LandingLayout.tsx`
