@@ -1,6 +1,7 @@
-### Commands to run
-Make sure you  are on Node `v14.17.0`
-After that run 
+## Commands to run
+----
+Make sure you  are on Node `v14.17.0`.
+### After that run 
 - ```npm i```
 - ```npm start```
 
