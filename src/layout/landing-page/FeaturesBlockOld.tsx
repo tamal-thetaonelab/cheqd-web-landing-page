@@ -12,7 +12,7 @@ import {
   SlidersTwoTone,
 } from "@ant-design/icons";
 
-export default function FeaturesBlock({ className }: any) {
+export default function FeaturesBlockOld({ className }: any) {
   const [features] = useState([
     {
       id: "compliance",

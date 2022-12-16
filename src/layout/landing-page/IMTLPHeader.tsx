@@ -67,12 +67,12 @@ function IMTLPHeader({}: Props): ReactElement {
           <Row style={{ height: 60 }} align="middle">
             <Col
               flex={1}
-              xs={6}
-              sm={6}
-              md={6}
-              lg={{ span: 7, offset: 3 }}
-              xl={{ span: 8, offset: 3 }}
-              xxl={{ span: 8, offset: 3 }}
+              xs={3}
+              sm={3}
+              md={3}
+              lg={{ span: 4, offset: 3 }}
+              xl={{ span: 5, offset: 3 }}
+              xxl={{ span: 5, offset: 3 }}
               offset={2}
             >
               <div
@@ -85,27 +85,27 @@ function IMTLPHeader({}: Props): ReactElement {
               >
                 <img
                   src="/logo@1x.png"
-                  style={{ width: 70, position: "relative", left: "-8px" }}
+                  style={{ width: 90, position: "relative", left: "-8px" }}
                   alt="imt-logo"
                 />
-                <div className={styles.mb} style={{ fontSize: 10 }}>
+                {/* <div className={styles.mb} style={{ fontSize: 10 }}>
                   [ Beta release ]
-                </div>
+                </div> */}
               </div>
             </Col>
-            <Col flex={1} />
+            
             <Col
               className={styles.spaceHeaderWrap}
-              flex={1}
-              lg={10}
-              xl={6}
-              xxl={6}
+              flex={3}
+              lg={13}
+              xl={9}
+              xxl={9}
             >
               <Space className={styles.spaceHeader}>
                 <Button
                   type="text"
                   onClick={() => {
-                    window.location.href = "#features";
+                    window.location.href = "#use-cases";
                     registerEvent(
                       ga.EVENT_CATEGORY_BUTTON_CLICK,
                       ga.EVENT_CLICK,
@@ -113,7 +113,34 @@ function IMTLPHeader({}: Props): ReactElement {
                     );
                   }}
                 >
+                  Use cases
+                </Button>
+                <Button
+                  type="text"
+                  onClick={() => {
+                    window.location.href = "#features";
+                    registerEvent(
+                      ga.EVENT_CATEGORY_BUTTON_CLICK,
+                      ga.EVENT_CLICK,
+                      ga.events.imtlpHeader281
+                    );
+                  }}
+                >
                   Features
+                </Button>
+                {/* <Button type="text">Blog</Button> */}
+                <Button
+                  type="text"
+                  onClick={() => {
+                    window.location.href = "#premium-services";
+                    registerEvent(
+                      ga.EVENT_CATEGORY_BUTTON_CLICK,
+                      ga.EVENT_CLICK,
+                      ga.events.imtlpHeader282
+                    );
+                  }}
+                >
+                  Premium services
                 </Button>
                 <Button
                   type="text"
@@ -122,17 +149,16 @@ function IMTLPHeader({}: Props): ReactElement {
                     registerEvent(
                       ga.EVENT_CATEGORY_BUTTON_CLICK,
                       ga.EVENT_CLICK,
-                      ga.events.imtlpHeader281
+                      ga.events.imtlpHeader282
                     );
                   }}
                 >
                   Pricing
                 </Button>
-                {/* <Button type="text">Blog</Button> */}
                 <Button
                   type="text"
                   onClick={() => {
-                    window.location.href = "#contact";
+                    window.location.href = "#contact-us";
                     registerEvent(
                       ga.EVENT_CATEGORY_BUTTON_CLICK,
                       ga.EVENT_CLICK,
@@ -140,7 +166,7 @@ function IMTLPHeader({}: Props): ReactElement {
                     );
                   }}
                 >
-                  Contact
+                  Contact us
                 </Button>
               </Space>
             </Col>
@@ -154,19 +180,18 @@ function IMTLPHeader({}: Props): ReactElement {
               xxl={3}
               className={styles.dropdownSelectWrap}
             >
-              <Select
+              {/* <Select
                 className={styles.dropdownSelect}
                 value={language}
-                /*tslint-disable-next-line jsx-no-lambda */
                 onChange={(v) => setLanguage("En")}
               >
                 <Option value="En">English</Option>
                 <Option value="Hi">हिंदी</Option>
                 <Option value="Bn">বাংলা</Option>
                 <Option value="Gj">ગુજરાતી</Option>
-              </Select>
+              </Select> */}
             </Col>
-            <Col flex={1} xs={{ span: 8 }} md={5} lg={4} xl={1} xxl={2}>
+            <Col flex={1} xs={{ span: 8 }} md={7} lg={6} xl={3} xxl={5}>
               <div
                 style={{
                   height: 60,
@@ -201,7 +226,7 @@ function IMTLPHeader({}: Props): ReactElement {
                       );
                     }}
                   >
-                    Sign up
+                   Start free trial
                   </Button>
                 </Space>
                 <Dropdown

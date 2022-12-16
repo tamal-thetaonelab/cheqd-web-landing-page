@@ -9,7 +9,6 @@ import { connect, ConnectedProps } from "react-redux";
 /* import SignupModal from "../../app/LandingPageApp/SignupModal"; */
 import IMTLPHeader from "./IMTLPHeader";
 import HeroBlock from "./HeroBlock";
-import FeaturesBlock from "./FeaturesBlock";
 import FinalBlock from "./FinalBlock";
 import PricingBlock from "./PricingBlock";
 import Testimonial from "./Testimonial";
@@ -19,6 +18,8 @@ import IMTMediaQueries from "~/component/IMTMediaQueries";
 import { registerEvent } from "~/analytics";
 
 import * as ga from "~/contants/gaConstants";
+import UseCasesBlock from "./UseCasesBlock";
+import FeatureBlock from "./FeatureBlock";
 
 /* const mapStateToProps = (_state: StoreState) => ({});
 const mapDispatchToProps = (dispatch: StoreDispatch) => ({
@@ -29,7 +30,7 @@ const mapDispatchToProps = (dispatch: StoreDispatch) => ({
 /* const connector = connect();
 
 type PropsFromRedux = ConnectedProps<typeof connector>;
-*/ 
+*/
 interface Props /* extends PropsFromRedux */ {
   doNotUseMe?: never;
   emailVerified: boolean | undefined | null;
@@ -90,27 +91,26 @@ class LandingLayout extends Component<Props> {
   render() {
     return (
       <IMTMediaQueries>
-        {(matches:any) => (
+        {(matches: any) => (
           <Layout>
             <IMTLPHeader />
             <div className={styles.bodyWrap}>
               <HeroBlock
                 className={styles.blockWrap}
-                showSignUpModal={()=>{}}
+                showSignUpModal={() => {}}
               />
-              <FeaturesBlock className={styles.blockWrap} />
+              <UseCasesBlock className={styles.blockWrap} />
+              <FeatureBlock className={styles.blockWrap} />
               <Testimonial
                 className={styles.blockWrap}
-                showSignupModal={()=>{}}
+                showSignupModal={() => {}}
               />
               <DataSafety
                 className={styles.blockWrap}
-                showSignupModal={()=>{}}
+                showSignupModal={() => {}}
               />
-              <PricingBlock
-                history={this.props.history}
-              />
-              <FinalBlock showSignUpModal={()=>{}} />
+              <PricingBlock history={this.props.history} />
+              <FinalBlock showSignUpModal={() => {}} />
             </div>
             <Footer />
             {/* <SignupModal /> */}

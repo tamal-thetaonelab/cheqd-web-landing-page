@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import React from "react";
 import styles from "./LandingPageLayout.module.css";
 
@@ -7,7 +8,7 @@ interface Props {
 
 const Illustration = (props: Props) => {
   return (
-    <svg
+    /*  <svg
       className={styles.illustrationSvg}
       xmlns="http://www.w3.org/2000/svg"
       width="100%"
@@ -170,7 +171,15 @@ const Illustration = (props: Props) => {
           <path fill="#fff" d="M0 0H557V320H0z" />
         </clipPath>
       </defs>
-    </svg>
+    </svg> */
+
+    <div className={styles.heroBlockImages}>
+      <div className={styles.shadowDiv}></div>
+      <div className={styles.heroBlockImg1}></div>
+      <div className={styles.heroBlockImg2}></div>
+      <div className={styles.heroBlockImg3}></div>
+      <div className={styles.heroBlockImg4}></div>
+    </div>
   );
 };
 

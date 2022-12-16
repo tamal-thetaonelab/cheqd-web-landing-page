@@ -24,16 +24,18 @@ export default function HeroBlock({ className, showSignUpModal }: any) {
         <Row className={cx(className, styles.heroblockRow)} justify="center">
           <Col sm={24} md={12} lg={12} className={styles.heroblockCol}>
             <Space direction="vertical" size={20}>
-              <Typography.Title
-                level={matches.lg ? 1 : matches.md ? 2 : 3}
+              <div
+                /* level={matches.lg ? 1 : matches.md ? 2 : 3} */
                 className={styles.HeadLine}
               >
-                {strings.HERO_TEXT}
-              </Typography.Title>
-              <Typography.Title level={5} className={styles.subLine}>
-                {strings.SUB_HERO_TEXT}
-              </Typography.Title>
+                Get
+                <span className={styles.primaryTextColor}> Taxes</span> &
+                <span className={styles.primaryTextColor}> Compliances</span>{" "}
+                done on time
+              </div>
+              <div className={styles.subLine}>{strings.SUB_HERO_TEXT}</div>
               <Space
+                style={{ marginTop: 30 }}
                 size={
                   matches.md ? "small" : matches.xs || matches.sm ? 4 : "middle"
                 }
@@ -58,23 +60,23 @@ export default function HeroBlock({ className, showSignUpModal }: any) {
                   type="primary"
                   size="large"
                   className={`${commonStyles["bg-processing"]} ${commonStyles["border-color-processing"]}`}
-                  onClick={() => {
+                  /* onClick={() => {
                     showSignUpModal();
                     registerEvent(
                       ga.EVENT_CATEGORY_BUTTON_CLICK,
                       ga.EVENT_CLICK,
                       ga.events.heroBlock279
                     );
-                  }}
+                  }} */
                 >
                   {/* {strings.START_FREE_TRIAL} */}
-                  Sign up
+                  {"Schedule a live demo"}
                 </Button>
               </Space>
               {/* type="text" size="large" ghost className=
               {`${commonStyles["text-color-processing"]} ${commonStyles["border-color-processing"]}`}{" "}
               */}
-              <Typography.Title level={5} className={styles.subLine}>
+              {/* <Typography.Title level={5} className={styles.subLine}>
                 <VanillaButton
                   onClick={() => {
                     setShowScheduler(true);
@@ -82,7 +84,7 @@ export default function HeroBlock({ className, showSignUpModal }: any) {
                   text={strings.SCHEDULE_DEMO}
                 />{" "}
                 {strings.FOR_IN_DEPTH_UNDERSTANDING}
-              </Typography.Title>
+              </Typography.Title> */}
             </Space>
             {/* <Space
               size={
