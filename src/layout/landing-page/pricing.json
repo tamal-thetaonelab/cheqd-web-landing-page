@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Small Biz",
-    "description": "Run all your business operations from a single platform. Securely allow your CA to access your data. \n      Track compliances in realtime. Add an unlimited number of users.",
+    "description": "Run all your business operations from a single platform. ",
     "free_trial_days": 0,
     "client_no": 0,
     "display_on_ui": true,
@@ -29,7 +29,7 @@
       {
         "period": "365 days",
         "plan_id": "plan_JGTI40mBig2qca",
-        "mrp_amount": 3600,
+        "mrp_amount": 254,
         "discount_rate": 22,
         "license_details_id": 4,
         "features": [
@@ -43,14 +43,14 @@
           { "feature": "Data import from Tally & excel", "is_active": true },
           { "feature": "Phone & email support", "is_active": true }
         ],
-        "discounted_amount": 2808
+        "discounted_amount": 198
       }
     ]
   },
   {
     "id": 2,
     "name": "Professional - 1",
-    "description": "Manage your clients compliances from a single platform. Add an unlimited number of team members.",
+    "description": "Manage your clients compliances from a single platform. ",
     "free_trial_days": 0,
     "client_no": 10,
     "display_on_ui": true,
@@ -71,7 +71,7 @@
           },
           { "feature": "Phone & email support", "is_active": true }
         ],
-        "discounted_amount": 5522
+        "discounted_amount": 390
       },
       {
         "period": "30 days",
@@ -96,7 +96,7 @@
   {
     "id": 3,
     "name": "Professional - 2",
-    "description": "Manage your clients compliances from a single platform. Add an unlimited number of team members.",
+    "description": "Manage your clients compliances from a single platform. ",
     "free_trial_days": 0,
     "client_no": 25,
     "display_on_ui": true,
@@ -142,7 +142,7 @@
   {
     "id": 40,
     "name": "Professional - 3",
-    "description": "Manage your clients compliances from a single platform. Add an unlimited number of team members.",
+    "description": "Manage your clients compliances from a single platform. ",
     "free_trial_days": 0,
     "client_no": 60,
     "display_on_ui": true,
@@ -188,7 +188,7 @@
   {
     "id": 41,
     "name": "Professional - 4",
-    "description": "Manage your clients compliances from a single platform. Add an unlimited number of team members.",
+    "description": "Manage your clients compliances from a single platform. ",
     "free_trial_days": 0,
     "client_no": 150,
     "display_on_ui": true,
@@ -234,7 +234,7 @@
   {
     "id": 42,
     "name": "Professional - 5",
-    "description": "Manage your clients compliances from a single platform. Add an unlimited number of team members.",
+    "description": "Manage your clients compliances from a single platform. ",
     "free_trial_days": 0,
     "client_no": 250,
     "display_on_ui": true,
@@ -280,7 +280,7 @@
   {
     "id": 43,
     "name": "Professional - 6",
-    "description": "Manage your clients compliances from a single platform. Add an unlimited number of team members.",
+    "description": "Manage your clients compliances from a single platform. ",
     "free_trial_days": 0,
     "client_no": 600,
     "display_on_ui": true,

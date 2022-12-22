@@ -15,7 +15,6 @@ const { Option } = Select;
   showSignUpModal: () => void
 }; */
 
-
 const connector = connect();
 type PropsFromRedux = ConnectedProps<typeof connector>;
 
@@ -32,6 +31,15 @@ const menu = (
       }}
     >
       Features
+    </Menu.Item>
+    <Menu.Divider />
+    <Menu.Item
+      key="0"
+      onClick={() => {
+        window.location.href = "#premiumservices";
+      }}
+    >
+      Premium services
     </Menu.Item>
     <Menu.Divider />
 
@@ -84,7 +92,7 @@ function IMTLPHeader({}: Props): ReactElement {
                 }}
               >
                 <img
-                  src="/logo@1x.png"
+                  src="/logo@2x.png"
                   style={{ width: 90, position: "relative", left: "-8px" }}
                   alt="imt-logo"
                 />
@@ -93,30 +101,20 @@ function IMTLPHeader({}: Props): ReactElement {
                 </div> */}
               </div>
             </Col>
-            
             <Col
               className={styles.spaceHeaderWrap}
-              flex={3}
-              lg={13}
-              xl={9}
-              xxl={9}
+              flex={5}
+              xs={8}
+              sm={6}
+              md={8}
+              lg={14}
+              xl={15}
+              xxl={15}
             >
               <Space className={styles.spaceHeader}>
                 <Button
                   type="text"
-                  onClick={() => {
-                    window.location.href = "#use-cases";
-                    registerEvent(
-                      ga.EVENT_CATEGORY_BUTTON_CLICK,
-                      ga.EVENT_CLICK,
-                      ga.events.imtlpHeader280
-                    );
-                  }}
-                >
-                  Use cases
-                </Button>
-                <Button
-                  type="text"
+                  className={styles.headerLinks}
                   onClick={() => {
                     window.location.href = "#features";
                     registerEvent(
@@ -128,9 +126,9 @@ function IMTLPHeader({}: Props): ReactElement {
                 >
                   Features
                 </Button>
-                {/* <Button type="text">Blog</Button> */}
                 <Button
                   type="text"
+                  className={styles.headerLinks}
                   onClick={() => {
                     window.location.href = "#premium-services";
                     registerEvent(
@@ -143,6 +141,7 @@ function IMTLPHeader({}: Props): ReactElement {
                   Premium services
                 </Button>
                 <Button
+                  className={styles.headerLinks}
                   type="text"
                   onClick={() => {
                     window.location.href = "#pricing";
@@ -156,6 +155,7 @@ function IMTLPHeader({}: Props): ReactElement {
                   Pricing
                 </Button>
                 <Button
+                  className={styles.headerLinks}
                   type="text"
                   onClick={() => {
                     window.location.href = "#contact-us";
@@ -168,75 +168,52 @@ function IMTLPHeader({}: Props): ReactElement {
                 >
                   Contact us
                 </Button>
-              </Space>
-            </Col>
-
-            <Col
-              flex={1}
-              sm={6}
-              md={3}
-              lg={2}
-              xl={5}
-              xxl={3}
-              className={styles.dropdownSelectWrap}
-            >
-              {/* <Select
-                className={styles.dropdownSelect}
-                value={language}
-                onChange={(v) => setLanguage("En")}
-              >
-                <Option value="En">English</Option>
-                <Option value="Hi">हिंदी</Option>
-                <Option value="Bn">বাংলা</Option>
-                <Option value="Gj">ગુજરાતી</Option>
-              </Select> */}
-            </Col>
-            <Col flex={1} xs={{ span: 8 }} md={7} lg={6} xl={3} xxl={5}>
-              <div
-                style={{
-                  height: 60,
-                  alignItems: "center",
-                  justifyContent: "flex-end",
-                  display: "flex",
-                }}
-              >
-                <Space>
-                  <Button
-                    type="text"
-                    onClick={() => {
-                      /* showLoginModal(); */
-                      registerEvent(
-                        ga.EVENT_CATEGORY_BUTTON_CLICK,
-                        ga.EVENT_CLICK,
-                        ga.events.imtlpHeader283
-                      );
-                    }}
-                  >
-                    Login
-                  </Button>
-                  <Button
-                    type="primary"
-                    className={`${commonStyles["bg-processing"]} ${commonStyles["border-color-processing"]}`}
-                    onClick={() => {
-                      /* showSignUpModal(); */
-                      registerEvent(
-                        ga.EVENT_CATEGORY_BUTTON_CLICK,
-                        ga.EVENT_CLICK,
-                        ga.events.imtlpHeader284
-                      );
-                    }}
-                  >
-                   Start free trial
-                  </Button>
-                </Space>
-                <Dropdown
-                  overlay={menu}
-                  trigger={["click"]}
-                  placement="bottomRight"
+                <div
+                  style={{
+                    height: 60,
+                    alignItems: "center",
+                    justifyContent: "flex-end",
+                    display: "flex",
+                  }}
                 >
-                  <MenuOutlined className={styles.hamburger} />
-                </Dropdown>
-              </div>
+                  <Space>
+                    <Button
+                      type="default"
+                      onClick={() => {
+                        /* showLoginModal(); */
+                        registerEvent(
+                          ga.EVENT_CATEGORY_BUTTON_CLICK,
+                          ga.EVENT_CLICK,
+                          ga.events.imtlpHeader283
+                        );
+                      }}
+                    >
+                      Login
+                    </Button>
+                    <Button
+                      type="primary"
+                      className={`${commonStyles["bg-processing"]} ${commonStyles["border-color-processing"]}`}
+                      onClick={() => {
+                        /* showSignUpModal(); */
+                        registerEvent(
+                          ga.EVENT_CATEGORY_BUTTON_CLICK,
+                          ga.EVENT_CLICK,
+                          ga.events.imtlpHeader284
+                        );
+                      }}
+                    >
+                      Start free trial
+                    </Button>
+                  </Space>
+                  <Dropdown
+                    overlay={menu}
+                    trigger={["click"]}
+                    placement="bottomRight"
+                  >
+                    <MenuOutlined className={styles.hamburger} />
+                  </Dropdown>
+                </div>
+              </Space>
             </Col>
             <Col span={matches.justWidePhone ? (matches.lg ? 3 : 2) : 1} />
           </Row>

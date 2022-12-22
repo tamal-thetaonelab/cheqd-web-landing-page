@@ -29,7 +29,7 @@ export default function FinalBlock({ className, showSignUpModal }: any) {
               style={{ whiteSpace: "pre" }}
               className={commonStyles["text-error"]}
             >
-              {strings.PRICE_START_FROM}
+              Enjoy no commitment free trial
             </Typography.Title>
             <Typography.Title
               level={3}

@@ -28,12 +28,21 @@ export default function HeroBlock({ className, showSignUpModal }: any) {
                 /* level={matches.lg ? 1 : matches.md ? 2 : 3} */
                 className={styles.HeadLine}
               >
-                Get
-                <span className={styles.primaryTextColor}> Taxes</span> &
-                <span className={styles.primaryTextColor}> Compliances</span>{" "}
-                done on time
+                Integrated{" "}
+                <span className={styles.primaryTextColor}> finance, hrms </span>
+                and{" "}
+                <span className={styles.primaryTextColor}>
+                  {" "}
+                  compliance{" "}
+                </span>{" "}
+                for <span className={styles.primaryTextColor}>startups</span>
               </div>
-              <div className={styles.subLine}>{strings.SUB_HERO_TEXT}</div>
+              <div className={styles.subLine}>
+                The platform streamlines financial management, HR
+                processes, and compliance for startups and IT / ITES
+                businesses. It's user-friendly and intuitive, and our team of
+                experts support in all steps so that you can focus on growing your business.
+              </div>
               <Space
                 style={{ marginTop: 30 }}
                 size={

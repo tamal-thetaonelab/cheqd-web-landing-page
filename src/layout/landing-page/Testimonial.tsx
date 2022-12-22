@@ -48,8 +48,8 @@ export default function Testimonials({ className, showSignupModal }: any) {
   return (
     <IMTMediaQueries>
       {(matches) => (
-        <Row className={cx(className, styles.TestimonialsWrap)}>
-          <Col
+        <Row className={cx(className, styles.blockWrapTestimonials)}>
+          {/* <Col
             flex={1}
             sm={24}
             md={12}
@@ -78,65 +78,63 @@ export default function Testimonials({ className, showSignupModal }: any) {
                   );
                 }}
               >
-                {/* {strings.START_FREE_TRIAL} */}
                 Sign up
               </Button>
             </Space>
           </Col>
 
-          <Col flex={1} />
-          <Col
-            flex={1}
-            sm={24}
-            md={{ span: 12 }}
-            lg={12}
-            className={styles.TestimonialsColSec}
-          >
+          <Col flex={1} /> */}
+          <Col flex={1} sm={24} md={24} lg={24}>
+            <div className={styles.HeadLineFeaturesBlock}>Testimonials</div>
             <Carousel
-              className={styles.CarouselWrap}
+              className={styles.TestimonialCarouselWrap}
               dots={false}
               slidesToShow={1}
-              effect="fade"
+              effect="scrollx"
               pauseOnHover
-              autoplay
+              autoplay={true}
             >
               {testimonials.map((v) => (
-                <div key={Math.random()} className={styles.testimonialCard}>
-                  <div className={styles.testimonialCreator}>
-                    <div className={styles.testimonialImageContainer}>
+                <div key={Math.random()}>
+                  <div className={styles.testimonialCard}>
+                    <div className={styles.testimonialCardLeft}>
                       <img
                         alt="profile"
                         src={v.image}
-                        style={{ width: "100%" }}
+                        className={styles.testimonialImage}
                       />
                     </div>
-                    <div
-                      style={{
-                        display: "flex",
-                        flexDirection: "column",
-                        margin: 10,
-                      }}
-                    >
-                      <h1 className={styles.testimonialCardHead}>{v.name}</h1>
-                      <h2 className={styles.testimonialCardHeadPosition}>
-                        {v.position}
-                        {", "}
-                        {v.websiteUrl ? (
-                          <a href={v.websiteUrl}>{v.company}</a>
-                        ) : (
-                          <span>{v.company}</span>
-                        )}
-                      </h2>
+                    <div className={styles.testimonialCardRight}>
+                      <div
+                        style={{
+                          display: "flex",
+                          flexDirection: "column",
+                          margin: 10,
+                        }}
+                      >
+                        <h1 className={styles.testimonialCardName}>{v.name}</h1>
+                        <h2 className={styles.testimonialCardPosition}>
+                          {v.position}
+                          {", "}
+                          {v.websiteUrl ? (
+                            <a href={v.websiteUrl}>{v.company}</a>
+                          ) : (
+                            <span>{v.company}</span>
+                          )}
+                        </h2>
+                      </div>
+                      <div className={styles.testimonialCardBody}>
+                        {v.testimonial}
+                      </div>
                     </div>
                   </div>
-                  <h1 className={styles.testimonialCardSub}>{v.testimonial}</h1>
                 </div>
               ))}
             </Carousel>
           </Col>
-          <div style={{ position: "absolute", bottom: -10, right: 20 }}>
+          {/* <div style={{ position: "absolute", bottom: -10, right: 20 }}>
             <Illustration2 />
-          </div>
+          </div> */}
         </Row>
       )}
     </IMTMediaQueries>
