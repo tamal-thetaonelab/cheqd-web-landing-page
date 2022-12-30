@@ -96,9 +96,15 @@ function IMTLPHeader({}: Props): ReactElement {
                   style={{ width: 90, position: "relative", left: "-8px" }}
                   alt="imt-logo"
                 />
-                {/* <div className={styles.mb} style={{ fontSize: 10 }}>
-                  [ Beta release ]
-                </div> */}
+                <div className={styles.mb} style={{ fontSize: 10 }}>
+                  {matches.xs ? " xs +" : ""}
+                  {matches.sm ? " sm +" : ""}
+                  {matches.md ? " md +" : ""}
+                  {matches.lg ? " lg +" : ""}
+                  {matches.xl ? " xl +" : ""}
+                  {matches.xxl ? " xxl +" : ""}
+
+                </div>
               </div>
             </Col>
             <Col
@@ -190,20 +196,33 @@ function IMTLPHeader({}: Props): ReactElement {
                     >
                       Login
                     </Button>
-                    <Button
-                      type="primary"
-                      className={`${commonStyles["bg-processing"]} ${commonStyles["border-color-processing"]}`}
-                      onClick={() => {
-                        /* showSignUpModal(); */
-                        registerEvent(
-                          ga.EVENT_CATEGORY_BUTTON_CLICK,
-                          ga.EVENT_CLICK,
-                          ga.events.imtlpHeader284
-                        );
-                      }}
-                    >
-                      Start free trial
-                    </Button>
+                    <div>
+                      <Button
+                        type="primary"
+                        className={`${commonStyles["bg-processing"]} ${commonStyles["border-color-processing"]} ${styles.hoverTransparancy}`}
+                        onClick={() => {
+                          /* showSignUpModal(); */
+                          registerEvent(
+                            ga.EVENT_CATEGORY_BUTTON_CLICK,
+                            ga.EVENT_CLICK,
+                            ga.events.imtlpHeader284
+                          );
+                        }}
+                      >
+                        Start free trial
+                      </Button>
+                      <div
+                        style={{
+                          fontSize: 8,
+                          fontWeight: 500,
+                          marginBottom: -12,
+                          marginTop: -1,
+                          textAlign: "center",
+                        }}
+                      >
+                        ( No credit card required )
+                      </div>
+                    </div>
                   </Space>
                   <Dropdown
                     overlay={menu}
@@ -217,13 +236,13 @@ function IMTLPHeader({}: Props): ReactElement {
             </Col>
             <Col span={matches.justWidePhone ? (matches.lg ? 3 : 2) : 1} />
           </Row>
-          <div className={styles.langSelectAltWrap}>
+          {/* <div className={styles.langSelectAltWrap}>
             <Select className={styles.dropdownSelect} defaultValue="En">
               <Option value="En">English</Option>
               <Option value="Gj">ગુજરાતી</Option>
               <Option value="Bn">বাংলা</Option>
             </Select>
-          </div>
+          </div> */}
         </div>
       )}
     </IMTMediaQueries>

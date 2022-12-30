@@ -20,6 +20,7 @@ import { registerEvent } from "~/analytics";
 import * as ga from "~/contants/gaConstants";
 import UseCasesBlock from "./UseCasesBlock";
 import FeatureBlock from "./FeatureBlock";
+import PremiumServices from "./PremiumServices";
 
 /* const mapStateToProps = (_state: StoreState) => ({});
 const mapDispatchToProps = (dispatch: StoreDispatch) => ({
@@ -110,6 +111,7 @@ class LandingLayout extends Component<Props> {
                 showSignupModal={() => {}}
               />
               <PricingBlock history={this.props.history} />
+              <PremiumServices className={styles.blockWrap} />
               <FinalBlock showSignUpModal={() => {}} />
               <Footer className={styles.blockWrapFooter} />
             </div>

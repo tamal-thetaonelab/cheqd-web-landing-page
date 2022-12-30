@@ -15,7 +15,7 @@ export default function FinalBlock({ className, showSignUpModal }: any) {
       <Row
         style={{
           height: "350px",
-          background: "#FFF",
+          background: "#F2F2F2",
           position: "relative",
         }}
       >
@@ -43,7 +43,7 @@ export default function FinalBlock({ className, showSignUpModal }: any) {
               size="large"
               ghost
               style={{ marginTop: 15 }}
-              className={`${commonStyles["text-color-processing"]} ${commonStyles["border-color-processing"]}`}
+              className={`${commonStyles["text-color-processing"]} ${commonStyles["border-color-processing"]}  ${styles.hoverTransparancy}`}
               onClick={() => {
                 registerEvent(
                   ga.EVENT_CATEGORY_BUTTON_CLICK,

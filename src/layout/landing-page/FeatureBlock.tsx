@@ -99,7 +99,13 @@ export default function FeatureBlock({ className, showSignupModal }: any) {
       {(matches) => {
         return (
           <Row className={cx(className, styles.featureBlock)}>
-            <Col flex={1} sm={24} md={24} lg={24}>
+            <Col
+              sm={24}
+              md={24}
+              lg={24}
+              xl={24}
+              xxl={24}
+            >
               <div className={styles.HeadLineFeaturesBlock}>
                 Why <span className={styles.primaryTextColor}>Cheqd ?</span> but
                 not others
@@ -107,7 +113,7 @@ export default function FeatureBlock({ className, showSignupModal }: any) {
               {features.map((feat, idx) => {
                 const [firstWord, ...rest] = feat.title.split(" ");
                 const col1 = (
-                  <Col flex={1} sm={24} md={10} lg={10}>
+                  <Col sm={24} md={11} xxl={8}>
                     <Space direction="vertical" size={10}>
                       <div className={styles.featureTitle}>
                         <span className={styles.primaryTextColor}>
@@ -120,7 +126,7 @@ export default function FeatureBlock({ className, showSignupModal }: any) {
                   </Col>
                 );
                 const col2 = (
-                  <Col flex={1} sm={24} md={12} lg={12}>
+                  <Col sm={24} md={11} xxl={8}>
                     {
                       <div
                         className={`${styles.featureBackGraphics} ${
@@ -152,15 +158,21 @@ export default function FeatureBlock({ className, showSignupModal }: any) {
                 if (feat.forward) {
                   columns = (
                     <Row className={styles.featureItem}>
+                      <Col xxl={3} />
                       {col1}
-                      <Col sm={0} md={2} lg={2} /> {col2}
+                      <Col sm={0} md={2} />
+                      {col2}
+                      <Col sm={0} md={0} lg={0} xxl={3}/>
                     </Row>
                   );
                 } else {
                   columns = (
                     <Row className={styles.featureItem}>
-                      {col2} <Col sm={0} md={2} lg={2} />
+                      <Col xxl={3} />
+                      {col2}
+                      <Col sm={0} md={2} />
                       {col1}
+                      <Col sm={0} md={0} lg={0} xxl={3}/>
                       {/* <div style={{border: "1px var(--primary-color) dashed", width:"70%", position: "absolute", left:0, bottom: 0}}></div> */}
                     </Row>
                   );

@@ -53,7 +53,7 @@ export default function HeroBlock({ className, showSignUpModal }: any) {
                   type="primary"
                   size="large"
                   ghost
-                  className={`${commonStyles["text-color-processing"]} ${commonStyles["border-color-processing"]}`}
+                  className={`${commonStyles["text-color-processing"]} ${commonStyles["border-color-processing"]} ${styles.hoverTransparancy}`}
                   onClick={() => {
                     setOpenVideoPlayer(true);
                     registerEvent(
@@ -68,7 +68,7 @@ export default function HeroBlock({ className, showSignUpModal }: any) {
                 <Button
                   type="primary"
                   size="large"
-                  className={`${commonStyles["bg-processing"]} ${commonStyles["border-color-processing"]}`}
+                  className={`${commonStyles["bg-processing"]} ${commonStyles["border-color-processing"]} ${styles.hoverTransparancy}`}
                   /* onClick={() => {
                     showSignUpModal();
                     registerEvent(
