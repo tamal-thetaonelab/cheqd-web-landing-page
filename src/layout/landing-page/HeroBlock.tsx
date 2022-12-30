@@ -21,27 +21,37 @@ export default function HeroBlock({ className, showSignUpModal }: any) {
   return (
     <IMTMediaQueries>
       {(matches) => (
-        <Row className={cx(className, styles.heroblockRow)} justify="center">
-          <Col sm={24} md={12} lg={12} className={styles.heroblockCol}>
+        <Row
+          className={cx(className, styles.heroblockRow)}
+          justify="center"
+          style={{ height: matches.xxl ? "75vh" : "92vh" }}
+        >
+          <Col
+            sm={24}
+            md={12}
+            lg={12}
+            style={{ display: "flex", alignItems: "center" }}
+          >
             <Space direction="vertical" size={20}>
               <div
                 /* level={matches.lg ? 1 : matches.md ? 2 : 3} */
                 className={styles.HeadLine}
               >
                 Integrated{" "}
-                <span className={styles.primaryTextColor}> finance, hrms </span>
+                <span className={styles.primaryTextColor}> Finance, HRMS </span>
                 and{" "}
                 <span className={styles.primaryTextColor}>
                   {" "}
-                  compliance{" "}
+                  Compliance{" "}
                 </span>{" "}
-                for <span className={styles.primaryTextColor}>startups</span>
+                for your{" "}
+                <span className={styles.primaryTextColor}> startup</span>
               </div>
               <div className={styles.subLine}>
-                The platform streamlines financial management, HR
-                processes, and compliance for startups and IT / ITES
-                businesses. It's user-friendly and intuitive, and our team of
-                experts support in all steps so that you can focus on growing your business.
+                The platform <b>streamlines</b> financial operations, HR processes, and
+                compliance for startups and IT / ITES businesses. It's <b>simple</b>, 
+                <b> intuitive</b> and <b>automates</b> mundane operations so that you can focus
+                on <b>growing</b> your business.
               </div>
               <Space
                 style={{ marginTop: 30 }}
@@ -132,10 +142,12 @@ export default function HeroBlock({ className, showSignUpModal }: any) {
             md={{ span: 11, offset: 1 }}
             lg={{ span: 11, offset: 1 }}
             xl={{ span: 10, offset: 2 }}
-            className={styles.illustrationCol}
+            /* className={styles.illustrationCol} */
+            style={{ display: "flex", alignItems: "center" }}
           >
             <div className={styles.illustrationSvg}>
               <Illustration />
+              <div className={styles.heroBlockImg4}></div>
             </div>
             <VideoDrawer
               url="https://www.youtube.com/watch?v=xiHV5NJRDVg"

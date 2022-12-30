@@ -8,8 +8,10 @@ import premiumServicesIllus from "~/assets/premium-services.png";
 import partnerImage1 from "~/assets/partner-images/ca-image.jpeg";
 import commonStyles from "~/component/common.module.css";
 
-const googleFormForPartner = "https://docs.google.com/forms/d/e/1FAIpQLSfUgIbqe9n4rmbnc5Nw9fpQSgIP7focFhL9eoIlaCRDA3ac8g/viewform?vc=0&c=0&w=1&flr=0"
-const googleFormForHumanAssistedServices = "https://docs.google.com/forms/d/e/1FAIpQLSfUgIbqe9n4rmbnc5Nw9fpQSgIP7focFhL9eoIlaCRDA3ac8g/viewform?vc=0&c=0&w=1&flr=0"
+const googleFormForPartner =
+  "https://docs.google.com/forms/d/e/1FAIpQLSfUgIbqe9n4rmbnc5Nw9fpQSgIP7focFhL9eoIlaCRDA3ac8g/viewform?vc=0&c=0&w=1&flr=0";
+const googleFormForHumanAssistedServices =
+  "https://docs.google.com/forms/d/e/1FAIpQLSfUgIbqe9n4rmbnc5Nw9fpQSgIP7focFhL9eoIlaCRDA3ac8g/viewform?vc=0&c=0&w=1&flr=0";
 
 const services = [
   {
@@ -81,7 +83,7 @@ export default function PremiumServices({ className, showSignUpModal }: any) {
   return (
     <IMTMediaQueries>
       {(matches) => (
-        <Row className={cx(className, styles.FeaturesBlock)} id="features">
+        <Row className={cx(className, styles.FeaturesBlock)} id="premium-services">
           <Col
             flex={1}
             sm={24}
@@ -94,26 +96,30 @@ export default function PremiumServices({ className, showSignUpModal }: any) {
             <div className={styles.HeadLineFeaturesBlock}>
               Premium <span className={styles.primaryTextColor}>services</span>
             </div>
-            <Space align="center" direction="horizontal" size={20}>
-              {services.map((val, idx) => {
-                return (
-                  <div
-                    className={`${styles.tabHeaderRounded} ${
-                      activeSlide === idx ? styles.tabHeaderRoundedActive : ""
-                    }`}
-                    onClick={() => {
-                      setOverrideAutoSlide(true);
-                      setActiveSlide(idx);
-                    }}
-                  >
-                    {val.title}
-                  </div>
-                );
-              })}
-            </Space>
+              <Space align="center" direction="horizontal" size={20} wrap className={styles.justifyCenter}>
+                {services.map((val, idx) => {
+                  return (
+                    <div
+                      className={`${styles.tabHeaderRounded} ${
+                        activeSlide === idx ? styles.tabHeaderRoundedActive : ""
+                      }`}
+                      onClick={() => {
+                        setOverrideAutoSlide(true);
+                        setActiveSlide(idx);
+                      }}
+                    >
+                      {val.title}
+                    </div>
+                  );
+                })}
+              </Space>
             <Row style={{ height: "450px" }}>
               <Col xl={2} xxl={3} /* style={{backgroundColor:'blue'}} */></Col>
-              <Col span={matches.xl ? 9 : 10} /* style={{backgroundColor:'green'}} */>
+              <Col
+                span={
+                  matches.xl ? 9 : 10
+                } /* style={{backgroundColor:'green'}} */
+              >
                 {
                   <div className={styles.useCasesTextWrapper}>
                     <div className={styles.useCasesSubtitle}>
@@ -138,7 +144,10 @@ export default function PremiumServices({ className, showSignUpModal }: any) {
                   </div>
                 }
               </Col>
-              <Col lg={2} xxl={1} /* style={{backgroundColor:'yellow'}} */></Col>
+              <Col
+                lg={2}
+                xxl={1} /* style={{backgroundColor:'yellow'}} */
+              ></Col>
               <Col lg={8} xl={9} /* style={{backgroundColor:'red'}} */>
                 <div
                   className={styles.useCasesImageWrapper}
@@ -151,7 +160,11 @@ export default function PremiumServices({ className, showSignUpModal }: any) {
                   </div> */}
                 </div>
               </Col>
-              <Col span={matches.lg ? 2 : 0} /* style={{backgroundColor:'purple'}} */></Col>
+              <Col
+                span={
+                  matches.lg ? 2 : 0
+                } /* style={{backgroundColor:'purple'}} */
+              ></Col>
             </Row>
             <Button
               type="primary"

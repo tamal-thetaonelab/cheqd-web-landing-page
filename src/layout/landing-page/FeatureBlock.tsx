@@ -29,7 +29,7 @@ const defaultLottieOptions = {
 const features = [
   {
     title: "GST billing, vendor management",
-    body: "Cheqd helps us in managing GST and other compliances. It also reminds about upcoming receivables. PF and ESI are also big pain for us and eagerly waiting for those to be available ",
+    body: "Create GST compatible invoices quickly. Download and send invoice with few clicks. Add vendors directly from their GST number, no data entry is required.",
     image: "feat-1.png",
     illustration: <Feat1 style={{ position: "absolute" }} />,
     animation: feat1,
@@ -37,7 +37,7 @@ const features = [
   },
   {
     title: "Purchase booking with AI",
-    body: "Cheqd helps us in managing GST and other compliances. It also reminds about upcoming receivables. PF and ESI are also big pain for us and eagerly waiting for those to be available ",
+    body: "Just upload your incoming invoices in pdf / image format and the system automatically populates the required fields. Saves hours of manual data entry through powerful Artificial Intelligence.",
     image: "feat-2.png",
     animation: feat2,
     illustration: <Feat2 style={{ position: "absolute" }} />,
@@ -45,7 +45,7 @@ const features = [
   },
   {
     title: "People management & payroll",
-    body: "Cheqd helps us in managing GST and other compliances. It also reminds about upcoming receivables. PF and ESI are also big pain for us and eagerly waiting for those to be available ",
+    body: "Manage your full-time, contractual & intern employees. The platform offers Employee-self-service, salary structuring, investment declaration, payroll processing & reimbursement management. This platform also allows you to comply with PF and ESI.",
     image: "feat-3.png",
     animation: feat1,
     illustration: null,
@@ -53,7 +53,7 @@ const features = [
   },
   {
     title: "Automated compliance booking",
-    body: "Cheqd helps us in managing GST and other compliances. It also reminds about upcoming receivables. PF and ESI are also big pain for us and eagerly waiting for those to be available ",
+    body: "Cheqd auto-draft compliances from your usual operations such as, creating invoice, purchase booking, payroll etc. You can see complete compliance calander along with filing fees, deadline, late fines & penalties.",
     image: "feat-4.png",
     illustration: <Feat2 style={{ position: "absolute" }} />,
     animation: feat2,
@@ -62,50 +62,45 @@ const features = [
 ];
 
 const otherFeatures = [
+ {
+    icon: "of-5.svg",
+    text: "Sync data to/fro GST, Tally & others",
+    iconComponent: OtherFeature5,
+  },
   /* {
-    icon: "of-1.svg",
-    text: "Employee management and payroll",
-    iconComponent: OtherFeature1,
+    icon: "of-2.svg",
+    text: "",
+    iconComponent: OtherFeature2,
   }, */
   {
-    icon: "of-2.svg",
-    text: "Expense management & employee reimbursement",
-    iconComponent: OtherFeature2,
-  },
-  {
     icon: "of-3.svg",
-    text: "Bank statement reconciliation",
+    text: "Reconcile bank statement with Sales / Purchase",
     iconComponent: OtherFeature3,
   },
   {
-    icon: "of-4.svg",
-    text: "Financial analytics, receivables and account payables",
-    iconComponent: OtherFeature4,
+    icon: "of-1.svg",
+    text: "Provide access to your CA for tax filing",
+    iconComponent: OtherFeature1,
   },
   {
-    icon: "of-5.svg",
-    text: "Fine grained access control",
-    iconComponent: OtherFeature5,
+    icon: "of-4.svg",
+    text: "Financial analytics, receivables and AP",
+    iconComponent: OtherFeature4,
   },
+  /* ,
   {
     icon: "of-6.svg",
     text: "Always up, access from anywhere",
     iconComponent: OtherFeature6,
-  },
+  }, */
 ];
 export default function FeatureBlock({ className, showSignupModal }: any) {
   return (
     <IMTMediaQueries>
       {(matches) => {
         return (
-          <Row className={cx(className, styles.featureBlock)}>
-            <Col
-              sm={24}
-              md={24}
-              lg={24}
-              xl={24}
-              xxl={24}
-            >
+          <Row className={cx(className, styles.featureBlock)} id="features">
+            <Col sm={24} md={24} lg={24} xl={24} xxl={24}>
               <div className={styles.HeadLineFeaturesBlock}>
                 Why <span className={styles.primaryTextColor}>Cheqd ?</span> but
                 not others
@@ -162,7 +157,7 @@ export default function FeatureBlock({ className, showSignupModal }: any) {
                       {col1}
                       <Col sm={0} md={2} />
                       {col2}
-                      <Col sm={0} md={0} lg={0} xxl={3}/>
+                      <Col sm={0} md={0} lg={0} xxl={3} />
                     </Row>
                   );
                 } else {
@@ -172,7 +167,7 @@ export default function FeatureBlock({ className, showSignupModal }: any) {
                       {col2}
                       <Col sm={0} md={2} />
                       {col1}
-                      <Col sm={0} md={0} lg={0} xxl={3}/>
+                      <Col sm={0} md={0} lg={0} xxl={3} />
                       {/* <div style={{border: "1px var(--primary-color) dashed", width:"70%", position: "absolute", left:0, bottom: 0}}></div> */}
                     </Row>
                   );

@@ -8,13 +8,6 @@ import cx from "classnames";
 
 import * as ga from "~/contants/gaConstants";
 
-/* const plans = require("./pricing.json");
-plans.forEach((plan: any) => {
-  plan.licenses.forEach((license: any) => {
-    license.term = license.period === "30 days" ? "MONTHLY" : "ANNUAL";
-  });
-}); */
-
 const plans = [
   {
     name: "Small business",
@@ -109,47 +102,16 @@ function PricingBlock({ className, showSignupModal }: any) {
   };
 
   return (
-    <Row className={cx(className, localstyles.blockWrapPricing)}>
+    <Row className={cx(className, localstyles.blockWrapPricing)} id="pricing">
       <Col flex={1} sm={24} md={24} lg={24}>
         <div className={localstyles.HeadLineFeaturesBlock}>Pricing</div>
-
-        {/* <div className={styles.switch}>
-              <div className={styles.switchWrap}>
-                <input
-                  id="toggle-on"
-                  className={`${styles.toggle} ${styles.toggleleft}`}
-                  name="toggle"
-                  value="false"
-                  type="radio"
-                  checked={this.state.activeTerm === "ANNUAL"}
-                  defaultChecked
-                />
-                <label
-                  htmlFor="toggle-on"
-                  className={`${styles.btn} ${styles.btnleft} `}
-                  onClick={this.handeleAnnual}
-                >
-                  Annual plan
-                </label>
-                <input
-                  id="toggle-off"
-                  className={`${styles.toggle} ${styles.toggleright}`}
-                  name="toggle"
-                  value="true"
-                  type="radio"
-                  checked={this.state.activeTerm === "MONTHLY"}
-                />
-                <label
-                  htmlFor="toggle-off"
-                  className={`${styles.btn} ${styles.btnright}`}
-                  onClick={this.handeleMonthly}
-                >
-                  Monthly plan
-                </label>
-              </div>
-            </div> */}
-
-        <Space direction="horizontal" align="start" size={30}>
+        <Space
+          direction="horizontal"
+          align="start"
+          size={30}
+          wrap
+          className={localstyles.justifyCenter}
+        >
           {plans.map((plan: any) => {
             return (
               <div key={plan.name} className={localstyles.pricingBlockItem}>

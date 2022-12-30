@@ -10,6 +10,9 @@ import { registerEvent } from "~/analytics";
 import * as ga from "~/contants/gaConstants";
 const { Option } = Select;
 
+const googleFormContactUs = "https://google.com"
+const aboutUsLink = "https://google.com"
+
 /* const mapDispatchToProps = {
   showLoginModal: () => null,
   showSignUpModal: () => void
@@ -36,7 +39,7 @@ const menu = (
     <Menu.Item
       key="0"
       onClick={() => {
-        window.location.href = "#premiumservices";
+        window.location.href = "#premium-services";
       }}
     >
       Premium services
@@ -58,10 +61,19 @@ const menu = (
     <Menu.Item
       key="4"
       onClick={() => {
-        window.location.href = "#contact";
+        window.location.href = googleFormContactUs;
       }}
     >
       Contact
+    </Menu.Item>
+    
+    <Menu.Item
+      key="4"
+      onClick={() => {
+        window.location.href = aboutUsLink;
+      }}
+    >
+      About
     </Menu.Item>
   </Menu>
 );
@@ -74,14 +86,14 @@ function IMTLPHeader({}: Props): ReactElement {
         <div>
           <Row style={{ height: 60 }} align="middle">
             <Col
-              flex={1}
               xs={3}
               sm={3}
               md={3}
               lg={{ span: 4, offset: 3 }}
-              xl={{ span: 5, offset: 3 }}
-              xxl={{ span: 5, offset: 3 }}
+              xl={{ span: 4, offset: 3 }}
+              xxl={{ span: 4, offset: 3 }}
               offset={2}
+              /* style={{ backgroundColor: "#45454589" }} */
             >
               <div
                 style={{
@@ -103,77 +115,97 @@ function IMTLPHeader({}: Props): ReactElement {
                   {matches.lg ? " lg +" : ""}
                   {matches.xl ? " xl +" : ""}
                   {matches.xxl ? " xxl +" : ""}
-
                 </div>
               </div>
             </Col>
             <Col
               className={styles.spaceHeaderWrap}
-              flex={5}
               xs={8}
               sm={6}
               md={8}
               lg={14}
-              xl={15}
-              xxl={15}
+              xl={14}
+              xxl={14}
+              /* style={{ backgroundColor: "#AA454589" }} */
             >
-              <Space className={styles.spaceHeader}>
-                <Button
-                  type="text"
-                  className={styles.headerLinks}
-                  onClick={() => {
-                    window.location.href = "#features";
-                    registerEvent(
-                      ga.EVENT_CATEGORY_BUTTON_CLICK,
-                      ga.EVENT_CLICK,
-                      ga.events.imtlpHeader281
-                    );
-                  }}
-                >
-                  Features
-                </Button>
-                <Button
-                  type="text"
-                  className={styles.headerLinks}
-                  onClick={() => {
-                    window.location.href = "#premium-services";
-                    registerEvent(
-                      ga.EVENT_CATEGORY_BUTTON_CLICK,
-                      ga.EVENT_CLICK,
-                      ga.events.imtlpHeader282
-                    );
-                  }}
-                >
-                  Premium services
-                </Button>
-                <Button
-                  className={styles.headerLinks}
-                  type="text"
-                  onClick={() => {
-                    window.location.href = "#pricing";
-                    registerEvent(
-                      ga.EVENT_CATEGORY_BUTTON_CLICK,
-                      ga.EVENT_CLICK,
-                      ga.events.imtlpHeader282
-                    );
-                  }}
-                >
-                  Pricing
-                </Button>
-                <Button
-                  className={styles.headerLinks}
-                  type="text"
-                  onClick={() => {
-                    window.location.href = "#contact-us";
-                    registerEvent(
-                      ga.EVENT_CATEGORY_BUTTON_CLICK,
-                      ga.EVENT_CLICK,
-                      ga.events.imtlpHeader282
-                    );
-                  }}
-                >
-                  Contact us
-                </Button>
+              <Space
+                className={styles.spaceHeader}
+                size={matches.xxl ? 30 : 10}
+              >
+                {matches.lg && (
+                  <>
+                    <Button
+                      type="text"
+                      className={styles.headerLinks}
+                      onClick={() => {
+                        window.location.href = "#features";
+                        registerEvent(
+                          ga.EVENT_CATEGORY_BUTTON_CLICK,
+                          ga.EVENT_CLICK,
+                          ga.events.imtlpHeader281
+                        );
+                      }}
+                    >
+                      Features
+                    </Button>
+                    <Button
+                      type="text"
+                      className={styles.headerLinks}
+                      onClick={() => {
+                        window.location.href = "#premium-services";
+                        registerEvent(
+                          ga.EVENT_CATEGORY_BUTTON_CLICK,
+                          ga.EVENT_CLICK,
+                          ga.events.imtlpHeader282
+                        );
+                      }}
+                    >
+                      Premium services
+                    </Button>
+                    <Button
+                      className={styles.headerLinks}
+                      type="text"
+                      onClick={() => {
+                        window.location.href = "#pricing";
+                        registerEvent(
+                          ga.EVENT_CATEGORY_BUTTON_CLICK,
+                          ga.EVENT_CLICK,
+                          ga.events.imtlpHeader282
+                        );
+                      }}
+                    >
+                      Pricing
+                    </Button>
+                    <Button
+                      className={styles.headerLinks}
+                      type="text"
+                      onClick={() => {
+                        window.location.href = aboutUsLink;
+                        registerEvent(
+                          ga.EVENT_CATEGORY_BUTTON_CLICK,
+                          ga.EVENT_CLICK,
+                          ga.events.imtlpHeader282
+                        );
+                      }}
+                    >
+                      Contact
+                    </Button>
+                    <Button
+                      className={styles.headerLinks}
+                      type="text"
+                      onClick={() => {
+                        window.location.href = aboutUsLink;
+                        registerEvent(
+                          ga.EVENT_CATEGORY_BUTTON_CLICK,
+                          ga.EVENT_CLICK,
+                          ga.events.imtlpHeader282
+                        );
+                      }}
+                    >
+                      About
+                    </Button>
+                  </>
+                )}
                 <div
                   style={{
                     height: 60,
@@ -234,7 +266,7 @@ function IMTLPHeader({}: Props): ReactElement {
                 </div>
               </Space>
             </Col>
-            <Col span={matches.justWidePhone ? (matches.lg ? 3 : 2) : 1} />
+            <Col span={matches.lg ? 3 : 2} />
           </Row>
           {/* <div className={styles.langSelectAltWrap}>
             <Select className={styles.dropdownSelect} defaultValue="En">

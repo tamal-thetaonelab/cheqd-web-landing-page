@@ -178,7 +178,6 @@ const Illustration = (props: Props) => {
       <div className={styles.heroBlockImg1}></div>
       <div className={styles.heroBlockImg2}></div>
       <div className={styles.heroBlockImg3}></div>
-      <div className={styles.heroBlockImg4}></div>
     </div>
   );
 };
