@@ -14,6 +14,15 @@ import { registerEvent } from "~/analytics";
 
 import * as ga from "~/contants/gaConstants";
 
+const renderIllustration = () => (
+  <div style={{ display: "flex", alignItems: "center" }}>
+    <div className={styles.illustrationSvg}>
+      <Illustration />
+      <div className={styles.heroBlockImg4}></div>
+    </div>
+  </div>
+);
+
 export default function HeroBlock({ className, showSignUpModal }: any) {
   const [showScheduler, setShowScheduler] = useState(false);
   const [openVideoPlayer, setOpenVideoPlayer] = useState(false);
@@ -24,15 +33,24 @@ export default function HeroBlock({ className, showSignUpModal }: any) {
         <Row
           className={cx(className, styles.heroblockRow)}
           justify="center"
-          style={{ height: matches.xxl ? "75vh" : "92vh" }}
+          style={{
+            height: matches.xxl ? "75vh" : matches.lg ? "92vh" : "unset",
+          }}
         >
           <Col
+            span={matches.justWidePhone ? 24 : 24}
             sm={24}
-            md={12}
-            lg={12}
-            style={{ display: "flex", alignItems: "center" }}
+            style={matches.md ? { display: "none" } : {}}
+            /* className={styles.illustrationCol} */
           >
-            <Space direction="vertical" size={20}>
+            {renderIllustration()}
+          </Col>
+          <Col xs={24} sm={24} md={12} lg={12}>
+            <Space
+              direction="vertical"
+              size={20}
+              style={{ display: "flex", alignItems: "flex-start" }}
+            >
               <div
                 /* level={matches.lg ? 1 : matches.md ? 2 : 3} */
                 className={styles.HeadLine}
@@ -48,16 +66,18 @@ export default function HeroBlock({ className, showSignUpModal }: any) {
                 <span className={styles.primaryTextColor}> startup</span>
               </div>
               <div className={styles.subLine}>
-                The platform <b>streamlines</b> financial operations, HR processes, and
-                compliance for startups and IT / ITES businesses. It's <b>simple</b>, 
-                <b> intuitive</b> and <b>automates</b> mundane operations so that you can focus
-                on <b>growing</b> your business.
+                The platform <b>streamlines</b> financial operations, HR
+                processes, and compliance for startups and IT / ITES businesses.
+                It's <b>simple</b>,<b> intuitive</b> and <b>automates</b>{" "}
+                mundane operations so that you can focus on <b>growing</b> your
+                business.
               </div>
               <Space
                 style={{ marginTop: 30 }}
                 size={
                   matches.md ? "small" : matches.xs || matches.sm ? 4 : "middle"
                 }
+                direction={matches.lg ? "horizontal" : "vertical"}
               >
                 <Button
                   type="primary"
@@ -79,96 +99,45 @@ export default function HeroBlock({ className, showSignUpModal }: any) {
                   type="primary"
                   size="large"
                   className={`${commonStyles["bg-processing"]} ${commonStyles["border-color-processing"]} ${styles.hoverTransparancy}`}
-                  /* onClick={() => {
-                    showSignUpModal();
-                    registerEvent(
-                      ga.EVENT_CATEGORY_BUTTON_CLICK,
-                      ga.EVENT_CLICK,
-                      ga.events.heroBlock279
-                    );
-                  }} */
                 >
-                  {/* {strings.START_FREE_TRIAL} */}
-                  {"Schedule a live demo"}
+                  {strings.SCHEDULE_DEMO}
                 </Button>
               </Space>
-              {/* type="text" size="large" ghost className=
-              {`${commonStyles["text-color-processing"]} ${commonStyles["border-color-processing"]}`}{" "}
-              */}
-              {/* <Typography.Title level={5} className={styles.subLine}>
-                <VanillaButton
-                  onClick={() => {
-                    setShowScheduler(true);
-                  }}
-                  text={strings.SCHEDULE_DEMO}
-                />{" "}
-                {strings.FOR_IN_DEPTH_UNDERSTANDING}
-              </Typography.Title> */}
             </Space>
-            {/* <Space
-              size={
-                matches.md ? "small" : matches.xs || matches.sm ? 4 : "middle"
-              }
-              style={{ marginTop: 50 }}
-            > */}
-            {/* <img
-                  style={{ height: 50 }}
-                  src={require("../../assets/pci.jpeg")}
-                  alt="PCI certification"
-                />
-                <img
-                  style={{ height: 50 }}
-                  src={require("../../assets/stqc.jpeg")}
-                  alt="PCI certification"
-                /> */}
-            {/*  <img
-                style={{ height: 50 }}
-                src={require("../../assets/sample-dss.png")}
-                alt="PCI certification"
-              />
-              <Typography.Title
-                level={matches.lg ? 5 : matches.md ? 5 : 5}
-                className={styles.subLine}
-                style={{ color: "var(--gray-1)" }}
-              >
-                {strings.YOUR_DATA_SAFE}
-              </Typography.Title>
-            </Space> */}
+            <br />
           </Col>
           <Col
-            flex={1}
-            span={matches.justWidePhone ? 18 : 24}
-            sm={16}
             md={{ span: 11, offset: 1 }}
             lg={{ span: 11, offset: 1 }}
             xl={{ span: 10, offset: 2 }}
+            style={
+              matches.xs || matches.sm || matches.justWidePhone
+                ? { display: "none" }
+                : {}
+            }
             /* className={styles.illustrationCol} */
-            style={{ display: "flex", alignItems: "center" }}
           >
-            <div className={styles.illustrationSvg}>
-              <Illustration />
-              <div className={styles.heroBlockImg4}></div>
-            </div>
-            <VideoDrawer
-              url="https://www.youtube.com/watch?v=xiHV5NJRDVg"
-              title="How cheqd works"
-              onClose={() => setOpenVideoPlayer(false)}
-              openDrawer={openVideoPlayer}
-              isMobile={!matches.lg && !matches.md}
-            />
-            <Drawer
-              placement="right"
-              visible={showScheduler}
-              onClose={() => {
-                setShowScheduler(false);
-              }}
-              width={matches.lg || matches.md ? "60%" : "100%"}
-              destroyOnClose
-              drawerStyle={{ backgroundColor: "rgb(245, 248, 250)" }}
-            >
-              <HubspotScheduler />
-            </Drawer>
+            {renderIllustration()}
           </Col>
+          <VideoDrawer
+            url="https://www.youtube.com/watch?v=xiHV5NJRDVg"
+            title="How cheqd works"
+            onClose={() => setOpenVideoPlayer(false)}
+            openDrawer={openVideoPlayer}
+            isMobile={!matches.lg && !matches.md}
+          />
+          <Drawer
+            placement="right"
+            visible={showScheduler}
+            onClose={() => {
+              setShowScheduler(false);
+            }}
+            width={matches.lg || matches.md ? "60%" : "100%"}
+            destroyOnClose
+            drawerStyle={{ backgroundColor: "rgb(245, 248, 250)" }}
+          >
+            <HubspotScheduler />
+          </Drawer>
         </Row>
       )}
     </IMTMediaQueries>

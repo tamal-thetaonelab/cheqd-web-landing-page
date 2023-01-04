@@ -19,7 +19,7 @@ export default function Footer({ className, showSignupModal }: any) {
             justify="center"
             id="footer"
           >
-            <Col span={6}>
+            <Col xs={24} md={6}>
               <div className={styles.footerColumn1}>
                 <img src="logo-white@1x.png" className={styles.footerLogo} />
                 <div>
@@ -46,8 +46,8 @@ export default function Footer({ className, showSignupModal }: any) {
           to us at <a href="mailto:support@cheqd.in">support@cheqd.in</a>
         </Typography.Title> */}
             </Col>
-            <Col span={2} />
-            <Col span={4}>
+            <Col md={2} xs={0} />
+            <Col xs={24} md={4}>
               <div className={styles.footerColumn2}>
                 {[
                   "Home",
@@ -68,8 +68,8 @@ export default function Footer({ className, showSignupModal }: any) {
                 })}
               </div>
             </Col>
-            <Col span={2}></Col>
-            <Col span={3}>
+            <Col xs={0} md={2}></Col>
+            <Col xs={24} md={3}>
               <div className={styles.footerColumn3}>
                 <div>Social media</div>
                 <div
@@ -94,8 +94,8 @@ export default function Footer({ className, showSignupModal }: any) {
               by <a href="https://thetaonelab.com">Theta One</a>
             </Typography.Title> */}
             </Col>
-            <Col span={2}></Col>
-            <Col span={5}>
+            <Col xs={0} md={2}></Col>
+            <Col xs={0} md={5}>
               <div className={styles.footerColumn4}>
                 <div>
                   Mail us at{" "}

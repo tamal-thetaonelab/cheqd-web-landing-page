@@ -1,0 +1,228 @@
+
+@media (min-width: 420px) {
+  /* .langSelectAltWrap {
+    right: 8.33333333%;
+  }
+  .girlIllustration {
+    position: absolute;
+    left: 20px;
+    width: 228px;
+    height: 159px;
+    bottom: 0;
+  } */
+}
+@media (min-width: 683px) {
+  /* .FeaturesBlockWrap {
+    justify-content: space-between;
+    max-width: 220px;
+  }
+
+  .heroblockRow {
+    justify-content: flex-start;
+  } */
+
+  /* .heroblockCol {
+    max-width: 400px !important;
+  } */
+}
+
+@media (min-width: 768px) {
+  /* .spaceHeader,
+  .mb {
+    display: none;
+  }
+
+  .spaceHeaderWrap {
+    display: none;
+  }
+
+  .subLineFeaturesBlock {
+    width: 70%;
+  }
+
+  .pricingBlock :global(.Grid-cell:nth-child(2n + 1)) {
+    justify-content: flex-end;
+  }
+  .pricingBlock :global(.Grid-cell:nth-child(2n)) {
+    justify-content: flex-start;
+  }
+
+  .finalBlockOnlyCol {
+    margin-top: 0;
+  }
+
+  .finalBlockWrap {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .girlIllustration {
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    height: 124px;
+  } */
+}
+
+@media (min-width: 992px) {
+  /* .pricingBlock :global(.react-pricing-table) {
+    width: 100%;
+  }
+  .pricingBlock :global(.Grid-cell > ul) {
+    width: 100% !important;
+    max-width: unset;
+    min-width: 196px;
+  }
+  .pricingBlock :global(.Grid-cell:first-child > ul) {
+    margin-left: 0px;
+  }
+  .pricingBlock :global(.Grid-cell:last-child > ul) {
+    margin-right: 0px;
+  } */
+  /* .blockWrap {
+    padding-left: 12.5%;
+    padding-right: 12.5%;
+  }
+
+  .spaceHeaderWrap {
+    display: block;
+  }
+
+  .spaceHeader,
+  .mb {
+    display: flex;
+  }
+
+  .spaceHeader {
+    height: 100%;
+  }
+
+  .hamburger {
+    display: none !important;
+  }
+
+  .dropdownSelectWrap {
+    display: block !important;
+  }
+
+  .langSelectAltWrap {
+    display: none;
+  }
+
+  .heroblockRow {
+    background: #9b51e00e;
+    align-items: stretch;
+  }
+
+  .heroblockCol {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .illustrationCol {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .illustrationSvg {
+    width: 100%;
+    padding-top: 0;
+    align-items: center;
+    height: 100%;
+  }
+
+  .FeaturesBlock {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .FeaturesBlockWrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0;
+    max-width: unset;
+    width: 23.5%;
+    justify-content: space-between;
+  }
+
+  .FeaturesBlockWrap:not(:last-child) {
+    margin-right: 2%;
+  }
+
+  
+  .girlIllustration {
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    width: 280px;
+    height: 189px;
+  } */
+}
+
+@media (min-width: 992px) and (max-width: 1259px) {
+  /* .pricingBlock {
+    padding-left: 4.16666667%;
+    padding-right: 4.16666667%;
+  }
+  .pricingBlock :global(.Grid) {
+    flex-wrap: nowrap;
+  }
+
+  .pricingBlock :global(.Grid-cell > ul) {
+    width: 196px;
+  } */
+
+  /* .pricingBlock :global(.Grid-cell) {
+    flex-basis: 50%;
+    width: 50%;
+  } */
+  /* .pricingBlock :global(.Grid-cell:nth-child(2n + 1)) {
+    justify-content: flex-start;
+  }
+  .pricingBlock :global(.Grid-cell:nth-child(2n)) {
+    justify-content: flex-start;
+  } */
+}
+
+@media (min-width: 1024px) {
+  /* .FeaturesBlockWrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0;
+    justify-content: space-between;
+  }
+ */
+  /* .dropdownSelect {
+    width: 120px !important;
+  } */
+}
+
+@media (min-width: 1200px) {
+  /* .pricingBlock :global(.Grid) {
+    flex-wrap: nowrap;
+  }
+
+  .girlIllustration {
+    width: 328px;
+    height: 259px;
+    bottom: 0px;
+  }
+
+  .dropdownSelect {
+    width: 100px !important;
+  } */
+}
+
+@media (min-width: 1440px) {
+  /* .langSelectAltWrap {
+    right: 12.5%;
+  } */
+}

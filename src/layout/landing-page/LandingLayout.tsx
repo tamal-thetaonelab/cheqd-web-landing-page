@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Layout, notification, Button } from "antd";
+import { Layout, notification, Button, Row, Col } from "antd";
 
 import styles from "./LandingPageLayout.module.css";
 
@@ -95,6 +95,25 @@ class LandingLayout extends Component<Props> {
         {(matches: any) => (
           <Layout>
             <IMTLPHeader />
+            <Row>
+              <Col span={24}>
+                <div
+                  style={{
+                    fontSize: "10px",
+                    textAlign: "center",
+                    background: "yellow",
+                  }}
+                >
+                  {matches.xs ? " xs +" : ""}
+                  {matches.justWidePhone ? " justWidePhone +" : ""}
+                  {matches.sm ? " sm +" : ""}
+                  {matches.md ? " md +" : ""}
+                  {matches.lg ? " lg +" : ""}
+                  {matches.xl ? " xl +" : ""}
+                  {matches.xxl ? " xxl +" : ""}
+                </div>
+              </Col>
+            </Row>
             <div className={styles.bodyWrap}>
               <HeroBlock
                 className={styles.blockWrap}

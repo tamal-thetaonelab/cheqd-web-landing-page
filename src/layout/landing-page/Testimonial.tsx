@@ -84,7 +84,7 @@ export default function Testimonials({ className, showSignupModal }: any) {
           </Col>
 
           <Col flex={1} /> */}
-          <Col flex={1} sm={24} md={24} lg={24}>
+          <Col sm={24}>
             <div className={styles.HeadLineFeaturesBlock}>Testimonials</div>
             <Carousel
               className={styles.TestimonialCarouselWrap}
@@ -95,7 +95,9 @@ export default function Testimonials({ className, showSignupModal }: any) {
               autoplay={true}
             >
               {testimonials.map((v) => (
-                <div key={Math.random()}>
+                <div
+                  key={Math.random()}
+                >
                   <div className={styles.testimonialCard}>
                     <div className={styles.testimonialCardLeft}>
                       <img

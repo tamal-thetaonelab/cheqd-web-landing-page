@@ -13,18 +13,10 @@ import OtherFeature5 from "./svg-icons/OtherFeature5";
 import OtherFeature6 from "./svg-icons/OtherFeature6";
 import Feat1 from "./svg-icons/Feat1";
 
-import Lottie from "react-lottie";
 import feat1 from "~/assets/lottie-animation/feat-1-invoicing.json";
 import feat2 from "~/assets/lottie-animation/feat-2-ai.json";
 import Feat2 from "./svg-icons/Feat2";
 
-const defaultLottieOptions = {
-  loop: false,
-  autoplay: true,
-  rendererSettings: {
-    preserveAspectRatio: "xMidYMid slice",
-  },
-};
 
 const features = [
   {

@@ -10,8 +10,8 @@ import { registerEvent } from "~/analytics";
 import * as ga from "~/contants/gaConstants";
 const { Option } = Select;
 
-const googleFormContactUs = "https://google.com"
-const aboutUsLink = "https://google.com"
+const googleFormContactUs = "https://google.com";
+const aboutUsLink = "https://google.com";
 
 /* const mapDispatchToProps = {
   showLoginModal: () => null,
@@ -66,7 +66,7 @@ const menu = (
     >
       Contact
     </Menu.Item>
-    
+
     <Menu.Item
       key="4"
       onClick={() => {
@@ -84,15 +84,17 @@ function IMTLPHeader({}: Props): ReactElement {
     <IMTMediaQueries>
       {(matches) => (
         <div>
-          <Row style={{ height: 60 }} align="middle">
+          <Row
+            style={{ height: 60 /* ,backgroundColor: "#454545AA" */ }}
+            align="middle"
+          >
             <Col
-              xs={3}
-              sm={3}
-              md={3}
-              lg={{ span: 4, offset: 3 }}
-              xl={{ span: 4, offset: 3 }}
-              xxl={{ span: 4, offset: 3 }}
-              offset={2}
+              xs={{ span: 4, offset: 1 }}
+              sm={{ span: 4, offset: 1 }}
+              md={{ span: 4, offset: 2 }}
+              lg={{ span: 4, offset: 2 }}
+              xl={{ span: 4, offset: 2 }}
+              xxl={{ span: 4, offset: 2 }}
               /* style={{ backgroundColor: "#45454589" }} */
             >
               <div
@@ -108,29 +110,29 @@ function IMTLPHeader({}: Props): ReactElement {
                   style={{ width: 90, position: "relative", left: "-8px" }}
                   alt="imt-logo"
                 />
-                <div className={styles.mb} style={{ fontSize: 10 }}>
+                {/* <div className={styles.mb} style={{ fontSize: 10 }}>
                   {matches.xs ? " xs +" : ""}
                   {matches.sm ? " sm +" : ""}
                   {matches.md ? " md +" : ""}
                   {matches.lg ? " lg +" : ""}
                   {matches.xl ? " xl +" : ""}
                   {matches.xxl ? " xxl +" : ""}
-                </div>
+                </div> */}
               </div>
             </Col>
             <Col
               className={styles.spaceHeaderWrap}
-              xs={8}
-              sm={6}
-              md={8}
-              lg={14}
-              xl={14}
-              xxl={14}
+              xs={{ span: 18, offset: 0 }}
+              sm={{ span: 18, offset: 0 }}
+              md={{ span: 16, offset: 0 }}
+              lg={16}
+              xl={16}
+              xxl={16}
               /* style={{ backgroundColor: "#AA454589" }} */
             >
               <Space
                 className={styles.spaceHeader}
-                size={matches.xxl ? 30 : 10}
+                /* size={matches.xxl ? 30 : 10} */
               >
                 {matches.lg && (
                   <>
@@ -215,19 +217,21 @@ function IMTLPHeader({}: Props): ReactElement {
                   }}
                 >
                   <Space>
-                    <Button
-                      type="default"
-                      onClick={() => {
-                        /* showLoginModal(); */
-                        registerEvent(
-                          ga.EVENT_CATEGORY_BUTTON_CLICK,
-                          ga.EVENT_CLICK,
-                          ga.events.imtlpHeader283
-                        );
-                      }}
-                    >
-                      Login
-                    </Button>
+                    {!matches.xs && (
+                      <Button
+                        type="default"
+                        onClick={() => {
+                          /* showLoginModal(); */
+                          registerEvent(
+                            ga.EVENT_CATEGORY_BUTTON_CLICK,
+                            ga.EVENT_CLICK,
+                            ga.events.imtlpHeader283
+                          );
+                        }}
+                      >
+                        Login
+                      </Button>
+                    )}
                     <div>
                       <Button
                         type="primary"
@@ -256,17 +260,19 @@ function IMTLPHeader({}: Props): ReactElement {
                       </div>
                     </div>
                   </Space>
-                  <Dropdown
-                    overlay={menu}
-                    trigger={["click"]}
-                    placement="bottomRight"
-                  >
-                    <MenuOutlined className={styles.hamburger} />
-                  </Dropdown>
+                  {!matches.lg && (
+                    <Dropdown
+                      overlay={menu}
+                      trigger={["click"]}
+                      placement="bottomRight"
+                    >
+                      <MenuOutlined className={styles.hamburger} />
+                    </Dropdown>
+                  )}
                 </div>
               </Space>
             </Col>
-            <Col span={matches.lg ? 3 : 2} />
+            <Col xs={1} sm={1} md={2} span={2} />
           </Row>
           {/* <div className={styles.langSelectAltWrap}>
             <Select className={styles.dropdownSelect} defaultValue="En">
