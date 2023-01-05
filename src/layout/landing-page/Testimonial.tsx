@@ -92,38 +92,62 @@ export default function Testimonials({ className, showSignupModal }: any) {
               slidesToShow={1}
               effect="scrollx"
               pauseOnHover
-              autoplay={true}
+              /* autoplay={true} */
             >
               {testimonials.map((v) => (
-                <div
-                  key={Math.random()}
-                >
+                <div key={Math.random()}>
                   <div className={styles.testimonialCard}>
-                    <div className={styles.testimonialCardLeft}>
-                      <img
-                        alt="profile"
-                        src={v.image}
-                        className={styles.testimonialImage}
-                      />
-                    </div>
+                    {matches.md && (
+                      <div className={styles.testimonialCardLeft}>
+                        <img
+                          alt="profile"
+                          src={v.image}
+                          className={styles.testimonialImage}
+                        />
+                      </div>
+                    )}
                     <div className={styles.testimonialCardRight}>
                       <div
                         style={{
                           display: "flex",
-                          flexDirection: "column",
-                          margin: 10,
+                          alignItems: "center",
+                          padding: "10px",
+                          paddingBottom: "0px",
                         }}
                       >
-                        <h1 className={styles.testimonialCardName}>{v.name}</h1>
-                        <h2 className={styles.testimonialCardPosition}>
-                          {v.position}
-                          {", "}
-                          {v.websiteUrl ? (
-                            <a href={v.websiteUrl}>{v.company}</a>
-                          ) : (
-                            <span>{v.company}</span>
-                          )}
-                        </h2>
+                        {!matches.md && (
+                          <img
+                            alt="profile"
+                            src={v.image}
+                            style={{
+                              width: "50px",
+                              height: "50px",
+                              borderRadius: "50%",
+                              flex: 1,
+                            }}
+                          />
+                        )}
+                        <div
+                          style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            margin: 10,
+                            flex: 4,
+                          }}
+                        >
+                          <h1 className={styles.testimonialCardName}>
+                            {v.name}
+                          </h1>
+                          <h2 className={styles.testimonialCardPosition}>
+                            {v.position}
+                            {", "}
+                            {v.websiteUrl ? (
+                              <a href={v.websiteUrl}>{v.company}</a>
+                            ) : (
+                              <span>{v.company}</span>
+                            )}
+                          </h2>
+                        </div>
                       </div>
                       <div className={styles.testimonialCardBody}>
                         {v.testimonial}

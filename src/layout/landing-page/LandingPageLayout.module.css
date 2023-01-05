@@ -491,7 +491,7 @@
 }
 
 .dataSafetyHeaderText {
-  text-align: "center";
+  text-align: center;
   color: var(--grey-1);
   font-size: 24px;
   font-weight: 600;
@@ -598,12 +598,23 @@
   font-weight: 600;
   margin-top: 10px;
 }
+@media (max-width: 500px) {
+  .featureTitle {
+    text-align: center;
+    font-size: 21px;
+  }
+}
 
 .featureBody {
   font-size: 18px;
   margin-top: 10px;
   font-weight: 500;
   text-align: justify;
+}
+@media (max-width: 500px) {
+  .featureBody {
+    text-align: center;
+  }
 }
 
 .featureBlock {
@@ -621,32 +632,68 @@
   background-color: #eaf4ff;
   text-align: left;
   /* border-bottom: 1px dashed var(--primary-color); */
-  height: 300px;
-  /* margin-bottom: 20px; */
+  /* height: 300px; */
 }
+@media (max-width: 500px) {
+  .featureItem {
+    margin-bottom: 30px;
+  }
+}
+
+.featureItemIllust {
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .featureItemIllust {
+    margin-top: 20px;
+    height: 175px;
+  }
+}
+
 .featureImg {
   position: absolute;
   /* width: 250px; */
   height: 200px;
   right: 60px;
   top: 0px;
-  display: none;
 }
+@media (max-width: 500px) {
+  .featureImg {
+    right: 0px;
+    height: unset;
+    width: 100%;
+  }
+}
+
 .featureImgReverse {
   right: unset;
   left: 60px;
 }
+@media (max-width: 500px) {
+  .featureImgReverse {
+    left: 0px;
+    height: unset;
+    width: 100%;
+  }
+}
+
 .featureBackGraphics {
   position: absolute;
   width: 300px;
   height: 200px;
   right: 0px;
   top: 20px;
-
   background: #ffc107;
   border-radius: 30px;
   transform: rotate(5.79deg);
-  display: none;
+}
+@media (max-width: 500px) {
+  .featureBackGraphics {
+    right: 0px;
+    top: 0px;
+    height: 175px;
+    width: 100%;
+  }
 }
 
 .graphicsRotateReverse {
@@ -657,7 +704,14 @@
   left: 0px;
   top: 20px;
 }
-
+@media (max-width: 500px) {
+  .graphicsRotateReverse {
+    right: 0px;
+    top: 0px;
+    height: 175px;
+    width: 100%;
+  }
+}
 .otherFeatureItemsWrapper {
   margin: 10px;
   display: flex;
@@ -801,6 +855,7 @@
   color: var(--grey-1);
   font-size: 17px;
   font-weight: 600;
+  margin-bottom: 0px;
 }
 .testimonialCardPosition {
   color: var(--grey-2);
@@ -815,4 +870,14 @@
   padding: 10px;
   width: 400px;
   text-align: justify;
+}
+@media (max-width: 500px) {
+  .testimonialCardBody {
+    width: unset;
+    background-color: white;
+    color: var(--grey-2);
+    font-weight: 600;
+    border-radius: 10px;
+    text-align: left;
+  }
 }

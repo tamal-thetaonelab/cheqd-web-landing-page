@@ -17,7 +17,6 @@ import feat1 from "~/assets/lottie-animation/feat-1-invoicing.json";
 import feat2 from "~/assets/lottie-animation/feat-2-ai.json";
 import Feat2 from "./svg-icons/Feat2";
 
-
 const features = [
   {
     title: "GST billing, vendor management",
@@ -54,7 +53,7 @@ const features = [
 ];
 
 const otherFeatures = [
- {
+  {
     icon: "of-5.svg",
     text: "Sync data to/fro GST, Tally & others",
     iconComponent: OtherFeature5,
@@ -113,7 +112,12 @@ export default function FeatureBlock({ className, showSignupModal }: any) {
                   </Col>
                 );
                 const col2 = (
-                  <Col sm={24} md={11} xxl={8}>
+                  <Col
+                    sm={24}
+                    md={11}
+                    xxl={8}
+                    className={styles.featureItemIllust}
+                  >
                     {
                       <div
                         className={`${styles.featureBackGraphics} ${
@@ -142,7 +146,8 @@ export default function FeatureBlock({ className, showSignupModal }: any) {
                   </Col>
                 );
                 let columns;
-                if (feat.forward) {
+                // if < lg then image illustration will be displayed before text - always
+                if (feat.forward && matches.lg) {
                   columns = (
                     <Row className={styles.featureItem}>
                       <Col xxl={3} />
