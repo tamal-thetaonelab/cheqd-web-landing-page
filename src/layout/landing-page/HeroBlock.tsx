@@ -73,7 +73,7 @@ export default function HeroBlock({ className, showSignUpModal }: any) {
                 business.
               </div>
               <Space
-                style={{ marginTop: 30 }}
+                style={{ marginTop: matches.md ? 30 : 5 }}
                 size={
                   matches.md ? "small" : matches.xs || matches.sm ? 4 : "middle"
                 }

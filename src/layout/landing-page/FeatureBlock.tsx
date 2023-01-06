@@ -43,7 +43,7 @@ const features = [
     forward: true,
   },
   {
-    title: "Automated compliance booking",
+    title: "Automated compliance booking & reminder",
     body: "Cheqd auto-draft compliances from your usual operations such as, creating invoice, purchase booking, payroll etc. You can see complete compliance calander along with filing fees, deadline, late fines & penalties.",
     image: "feat-4.png",
     illustration: <Feat2 style={{ position: "absolute" }} />,

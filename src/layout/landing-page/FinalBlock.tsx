@@ -14,7 +14,6 @@ export default function FinalBlock({ className, showSignUpModal }: any) {
     <div className={cx(className)} style={{ display: "block" }}>
       <Row
         style={{
-          height: "350px",
           background: "#F2F2F2",
           position: "relative",
         }}

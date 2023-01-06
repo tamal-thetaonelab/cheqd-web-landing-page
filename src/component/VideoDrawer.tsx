@@ -25,6 +25,7 @@ const VideoDrawer = (props: Props) => {
       drawerStyle={{ backgroundColor: "black", zIndex: 2000 }}
       className={style.bumpZIndex}
       destroyOnClose
+      closeIcon={<div style={{color: 'white'}}>Close video</div>}
     >
       <ReactPlayer url={url} stopOnUnmount playing width="100%" pip />
     </Drawer>

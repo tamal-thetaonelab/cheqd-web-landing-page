@@ -122,8 +122,8 @@ export default function Footer({ className, showSignupModal }: any) {
               alignItems: "center",
               textAlign: "center",
               color: "white",
-              fontSize: "17px",
-              fontWeight: 400,
+              fontSize: "13px",
+              fontWeight: 600,
               backgroundColor: "var(--processing-color)",
               opacity: "80%",
             }}

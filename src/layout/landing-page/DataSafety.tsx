@@ -35,7 +35,7 @@ export default function Testimonials({ className, showSignupModal }: any) {
             <Space
               direction="horizontal"
               align="center"
-              size={80}
+              size={matches.xs || matches.justWidePhone ? 5 : 80}
               style={{
                 marginTop: 20,
                 flexWrap: "wrap",
