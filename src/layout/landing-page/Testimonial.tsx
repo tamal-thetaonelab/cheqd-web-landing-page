@@ -92,10 +92,12 @@ export default function Testimonials({ className, showSignupModal }: any) {
               slidesToShow={1}
               effect="scrollx"
               pauseOnHover
-              /* autoplay={true} */
+              autoplay={true}
             >
               {testimonials.map((v) => (
-                <div key={Math.random()}>
+                <div
+                  key={Math.random()}
+                >
                   <div className={styles.testimonialCard}>
                     {matches.md && (
                       <div className={styles.testimonialCardLeft}>
@@ -123,7 +125,6 @@ export default function Testimonials({ className, showSignupModal }: any) {
                               width: "50px",
                               height: "50px",
                               borderRadius: "50%",
-                              flex: 1,
                             }}
                           />
                         )}

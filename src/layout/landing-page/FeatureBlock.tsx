@@ -16,6 +16,7 @@ import Feat1 from "./svg-icons/Feat1";
 import feat1 from "~/assets/lottie-animation/feat-1-invoicing.json";
 import feat2 from "~/assets/lottie-animation/feat-2-ai.json";
 import Feat2 from "./svg-icons/Feat2";
+import Graphics2 from '~/assets/graphics-2.png'
 
 const features = [
   {
@@ -91,16 +92,19 @@ export default function FeatureBlock({ className, showSignupModal }: any) {
       {(matches) => {
         return (
           <Row className={cx(className, styles.featureBlock)} id="features">
+            <img className={styles.featGraphics2} src={Graphics2} />
             <Col sm={24} md={24} lg={24} xl={24} xxl={24}>
               <div className={styles.HeadLineFeaturesBlock}>
                 Why <span className={styles.primaryTextColor}>Cheqd ?</span> but
                 not others
               </div>
+
               {features.map((feat, idx) => {
                 const [firstWord, ...rest] = feat.title.split(" ");
                 const col1 = (
                   <Col sm={24} md={11} xxl={8}>
                     <Space direction="vertical" size={10}>
+                      <div className={styles.featureSepGraphics}></div>
                       <div className={styles.featureTitle}>
                         <span className={styles.primaryTextColor}>
                           {firstWord}
@@ -147,7 +151,7 @@ export default function FeatureBlock({ className, showSignupModal }: any) {
                 );
                 let columns;
                 // if < lg then image illustration will be displayed before text - always
-                if (feat.forward && matches.lg) {
+                if (feat.forward && matches.md) {
                   columns = (
                     <Row className={styles.featureItem}>
                       <Col xxl={3} />
@@ -169,14 +173,14 @@ export default function FeatureBlock({ className, showSignupModal }: any) {
                     </Row>
                   );
                 }
-                return <Row>{columns}</Row>;
+                return <Row key={`rows-${idx}`}>{columns}</Row>;
               })}
               <div className={styles.otherFeatureItemsWrapper}>
                 {otherFeatures.map((feat: any) => {
                   return (
-                    <div className={styles.otherFeatureItem}>
+                    <div className={styles.otherFeatureItem} key={feat.text}>
                       <feat.iconComponent />
-                      <div>{feat.text}</div>
+                      <div className={styles.standartBodyText}>{feat.text}</div>
                     </div>
                   );
                 })}

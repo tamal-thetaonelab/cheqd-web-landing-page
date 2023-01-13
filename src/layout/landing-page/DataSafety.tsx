@@ -42,9 +42,13 @@ export default function Testimonials({ className, showSignupModal }: any) {
                 justifyContent: "center",
               }}
             >
-              {dsItems.map((ds: any) => {
+              {dsItems.map((ds: any, idx: number) => {
                 return (
-                  <Space direction="vertical" align="center">
+                  <Space
+                    direction="vertical"
+                    align="center"
+                    key={`space-datasafety-${idx}`}
+                  >
                     <img
                       className={styles.dataSafetyItemImg}
                       src={ds.icon}

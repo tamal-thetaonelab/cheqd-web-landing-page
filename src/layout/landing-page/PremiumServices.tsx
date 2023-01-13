@@ -127,7 +127,6 @@ export default function PremiumServices({ className, showSignUpModal }: any) {
                 xs={0}
                 xl={2}
                 xxl={3}
-                style={{ backgroundColor: "blue" }}
               ></Col>
               <Col
                 span={
@@ -136,7 +135,7 @@ export default function PremiumServices({ className, showSignUpModal }: any) {
               >
                 {
                   <div className={styles.useCasesTextWrapper}>
-                    <div className={styles.useCasesSubtitle}>
+                    <div className={`${styles.useCasesSubtitle} ${styles.standartHeading}`}>
                       {services[activeSlide].Subtitle}
                     </div>
                     {/* <div className={styles.useCasesBody}>
@@ -145,7 +144,7 @@ export default function PremiumServices({ className, showSignUpModal }: any) {
                     <div className={styles.useCasesBulletWrapper}>
                       {services[activeSlide].bullets.map((bul) => {
                         return (
-                          <div className={styles.useCasesBulletItem}>
+                          <div className={`${styles.useCasesBulletItem} ${styles.standartBodyText}`}>
                             <span className={styles.useCasesBulletSpan}>
                               {" "}
                               [+]{" "}
@@ -200,15 +199,15 @@ export default function PremiumServices({ className, showSignUpModal }: any) {
                   <div className={styles.partnerHeader}>Partners</div>
                   <div className={styles.partnerItemWrap}>
                     {partners.map((prt: any) => (
-                      <Col xs={24} md={12} lg={8}>
+                      <Col xs={24} md={12} lg={8} xl={8} xxl={5} className={styles.partnerItemWrapCol}>
                         <div className={styles.partnerItem}>
                           <div className={styles.partnerItemImage}>
                             <img src={prt.image} />
                           </div>
-                          <div className={styles.partnerItemName}>
+                          <div className={`${styles.partnerItemName} ${styles.standartHeading}`}>
                             {prt.name}
                           </div>
-                          <div className={styles.partnerItemBio}>{prt.bio}</div>
+                          <div className={`${styles.partnerItemBio} ${styles.standartBodyText}`}>{prt.bio}</div>
                         </div>
                       </Col>
                     ))}

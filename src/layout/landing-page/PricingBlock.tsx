@@ -127,7 +127,7 @@ function PricingBlock({ className, showSignupModal }: any) {
                   <>
                     {plan.features.map((feat: any) => {
                       return (
-                        <div key={feat.feature}>
+                        <div key={feat.feature} className={localstyles.standartBodyText}>
                           <span>[+] </span>
                           {feat.feature}
                         </div>

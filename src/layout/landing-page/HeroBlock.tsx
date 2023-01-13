@@ -11,6 +11,7 @@ import strings from "../../i18n/en";
 import VideoDrawer from "~/component/VideoDrawer";
 import VanillaButton from "~/component/VanillaButton";
 import { registerEvent } from "~/analytics";
+import Graphics1 from '~/assets/graphics-1-1.png'
 
 import * as ga from "~/contants/gaConstants";
 
@@ -33,15 +34,13 @@ export default function HeroBlock({ className, showSignUpModal }: any) {
         <Row
           className={cx(className, styles.heroblockRow)}
           justify="center"
-          style={{
-            height: matches.xxl ? "75vh" : matches.lg ? "92vh" : "unset",
-          }}
         >
+          <img className={styles.heroGraphics1} src={Graphics1} />
           <Col
             span={matches.justWidePhone ? 24 : 24}
             sm={24}
             style={matches.md ? { display: "none" } : {}}
-            /* className={styles.illustrationCol} */
+            className={styles.illustrationCol}
           >
             {renderIllustration()}
           </Col>
@@ -50,6 +49,7 @@ export default function HeroBlock({ className, showSignUpModal }: any) {
               direction="vertical"
               size={20}
               style={{ display: "flex", alignItems: "flex-start" }}
+              className={styles.textCol}
             >
               <div
                 /* level={matches.lg ? 1 : matches.md ? 2 : 3} */
@@ -77,7 +77,7 @@ export default function HeroBlock({ className, showSignUpModal }: any) {
                 size={
                   matches.md ? "small" : matches.xs || matches.sm ? 4 : "middle"
                 }
-                direction={matches.lg ? "horizontal" : "vertical"}
+                direction={matches.md ? "horizontal" : "vertical"}
               >
                 <Button
                   type="primary"
@@ -110,12 +110,8 @@ export default function HeroBlock({ className, showSignUpModal }: any) {
             md={{ span: 11, offset: 1 }}
             lg={{ span: 11, offset: 1 }}
             xl={{ span: 10, offset: 2 }}
-            style={
-              matches.xs || matches.sm || matches.justWidePhone
-                ? { display: "none" }
-                : {}
-            }
-            /* className={styles.illustrationCol} */
+            style={matches.md ? {} : { display: "none" }}
+            className={styles.illustrationCol}
           >
             {renderIllustration()}
           </Col>
