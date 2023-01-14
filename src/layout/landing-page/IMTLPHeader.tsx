@@ -140,20 +140,6 @@ function IMTLPHeader({}: Props): ReactElement {
                       type="text"
                       className={styles.headerLinks}
                       onClick={() => {
-                        window.location.href = "#features";
-                        registerEvent(
-                          ga.EVENT_CATEGORY_BUTTON_CLICK,
-                          ga.EVENT_CLICK,
-                          ga.events.imtlpHeader281
-                        );
-                      }}
-                    >
-                      Features
-                    </Button>
-                    <Button
-                      type="text"
-                      className={styles.headerLinks}
-                      onClick={() => {
                         window.location.href = "#premium-services";
                         registerEvent(
                           ga.EVENT_CATEGORY_BUTTON_CLICK,
@@ -193,6 +179,35 @@ function IMTLPHeader({}: Props): ReactElement {
                       Contact
                     </Button>
                     <Button
+                      type="text"
+                      className={styles.headerLinks}
+                      onClick={() => {
+                        window.location.href = "#features";
+                        registerEvent(
+                          ga.EVENT_CATEGORY_BUTTON_CLICK,
+                          ga.EVENT_CLICK,
+                          ga.events.imtlpHeader281
+                        );
+                      }}
+                    >
+                      <b className={styles.animatedText}>{"Hiring"}</b>
+                    </Button>
+                    <Button
+                      type="text"
+                      className={styles.headerLinks}
+                      onClick={() => {
+                        window.location.href = "#features";
+                        registerEvent(
+                          ga.EVENT_CATEGORY_BUTTON_CLICK,
+                          ga.EVENT_CLICK,
+                          ga.events.imtlpHeader281
+                        );
+                      }}
+                    >
+                      About us
+                    </Button>
+
+                    {/* <Button
                       className={styles.headerLinks}
                       type="text"
                       onClick={() => {
@@ -205,7 +220,7 @@ function IMTLPHeader({}: Props): ReactElement {
                       }}
                     >
                       About
-                    </Button>
+                    </Button> */}
                   </>
                 )}
                 <div

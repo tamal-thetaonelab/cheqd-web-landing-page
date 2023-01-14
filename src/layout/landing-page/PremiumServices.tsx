@@ -17,32 +17,34 @@ const services = [
   {
     title: "Assisted tax filing",
     Subtitle: "Looking for a human help to take care your taxation needs ?",
-    body: "Also have local sales? Too many sales reports at the month end to compile? Reports are of different formats? Compilation of all these to make a GST ready file is entirely manual and takes huge effort.",
+    body: "",
     bullets: [
-      "Transparent pricing",
-      "Compliance dashboard",
+      "Compliance calendar & dashboard",
       "No more asking for financial data to your CA, all are available round the clock.",
-      "GST, TDS, PTAX, PF and ESI",
+      "GST, TDS, PTAX, PF, MCA and ESI - all major compliances are covered",
+      "Transparent pricing",
     ],
   },
   {
     title: "Partner driven services",
-    Subtitle: "Are you selling your products on various eCommerce platforms? ",
-    body: "Also have local sales? Too many sales reports at the month end to compile? Reports are of different formats? Compilation of all these to make a GST ready file is entirely manual and takes huge effort.",
+    Subtitle: "Looking for a affordable yet complete auditing & advisory services ?",
+    body: "We have partnered with experienced chartered accountants, cost & management accountants, company secratories to help you.",
     bullets: [
-      "Automate compilation of sales reports from various eCommerce platforms with high precision and making GST file ready in just 10 minutes.",
-      "Automate TCS calculations Advanced reconciliation features to help you file your compliance accurately",
-      "No missing of compliance deadlines as there will be automated reminders from Cheqd Separately manage local sales efficiently with solutions from Cheqd",
+      "Regulatory audit",
+      "Tax audit",
+      "Advisory & consultancy services",
     ],
   },
   {
     title: "Adhoc services",
-    Subtitle: "Are you selling your products on various eCommerce platforms? ",
-    body: "Also have local sales? Too many sales reports at the month end to compile? Reports are of different formats? Compilation of all these to make a GST ready file is entirely manual and takes huge effort.",
+    Subtitle: "Let us help you various Govt. registrations & applications",
+    body: "",
     bullets: [
-      "Automate compilation of sales reports from various eCommerce platforms with high precision and making GST file ready in just 10 minutes.",
-      "Automate TCS calculations Advanced reconciliation features to help you file your compliance accurately",
-      "No missing of compliance deadlines as there will be automated reminders from Cheqd Separately manage local sales efficiently with solutions from Cheqd",
+      "Comapny incorporation",
+      "GST Registration",
+      "DSC ceration",
+      "PAN / TAN registration",
+      "FSSAI registration",
     ],
   },
 ];
@@ -64,19 +66,20 @@ const partners = [
   },
 ];
 
+let timerHandle:any;
 export default function PremiumServices({ className, showSignUpModal }: any) {
   const [activeSlide, setActiveSlide] = useState(0);
   const [overrideAutoSlide, setOverrideAutoSlide] = useState(false);
   const getActiveSlide = () => activeSlide;
   useEffect(() => {
     if (!overrideAutoSlide) {
-      setTimeout(() => {
+      timerHandle = setTimeout(() => {
         setActiveSlide((activeSlide + 1) % services.length);
       }, 4000);
     }
   }, [activeSlide]);
   useEffect(() => {
-    setTimeout(() => {
+    timerHandle = setTimeout(() => {
       setActiveSlide((activeSlide + 1) % services.length);
     }, 4000);
   }, []);
@@ -113,6 +116,7 @@ export default function PremiumServices({ className, showSignUpModal }: any) {
                       activeSlide === idx ? styles.tabHeaderRoundedActive : ""
                     }`}
                     onClick={() => {
+                      if(timerHandle) clearTimeout(timerHandle)
                       setOverrideAutoSlide(true);
                       setActiveSlide(idx);
                     }}
@@ -138,9 +142,9 @@ export default function PremiumServices({ className, showSignUpModal }: any) {
                     <div className={`${styles.useCasesSubtitle} ${styles.standartHeading}`}>
                       {services[activeSlide].Subtitle}
                     </div>
-                    {/* <div className={styles.useCasesBody}>
+                    <div className={styles.useCasesBody}>
                       {services[activeSlide].body}
-                    </div> */}
+                    </div>
                     <div className={styles.useCasesBulletWrapper}>
                       {services[activeSlide].bullets.map((bul) => {
                         return (
@@ -193,7 +197,7 @@ export default function PremiumServices({ className, showSignUpModal }: any) {
             >
               Let's connect
             </Button>
-            <Row style={{ marginTop: 30 }}>
+            {/* <Row style={{ marginTop: 30 }}>
               <Col span={24}>
                 <div>
                   <div className={styles.partnerHeader}>Partners</div>
@@ -225,7 +229,7 @@ export default function PremiumServices({ className, showSignUpModal }: any) {
                   </Button>
                 </div>
               </Col>
-            </Row>
+            </Row> */}
           </Col>
         </Row>
       )}

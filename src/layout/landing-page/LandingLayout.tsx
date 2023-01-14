@@ -101,16 +101,17 @@ class LandingLayout extends Component<Props> {
                   style={{
                     fontSize: "10px",
                     textAlign: "center",
-                    background: "yellow",
+                    height: "20px",
+                    /* background: "yellow", */
                   }}
                 >
-                  {matches.xs ? " xs +" : ""}
+                 {/*  {matches.xs ? " xs +" : ""}
                   {matches.justWidePhone ? " justWidePhone +" : ""}
                   {matches.sm ? " sm +" : ""}
                   {matches.md ? " md +" : ""}
                   {matches.lg ? " lg +" : ""}
                   {matches.xl ? " xl +" : ""}
-                  {matches.xxl ? " xxl +" : ""}
+                  {matches.xxl ? " xxl +" : ""} */}
                 </div>
               </Col>
             </Row>

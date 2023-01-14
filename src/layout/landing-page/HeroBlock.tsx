@@ -84,6 +84,7 @@ export default function HeroBlock({ className, showSignUpModal }: any) {
                   size="large"
                   ghost
                   className={`${commonStyles["text-color-processing"]} ${commonStyles["border-color-processing"]} ${styles.hoverTransparancy}`}
+                  style={{backgroundColor: "white"}}
                   onClick={() => {
                     setOpenVideoPlayer(true);
                     registerEvent(

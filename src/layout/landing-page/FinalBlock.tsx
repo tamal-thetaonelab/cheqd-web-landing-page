@@ -40,9 +40,8 @@ export default function FinalBlock({ className, showSignUpModal }: any) {
             <Button
               type="primary"
               size="large"
-              ghost
               style={{ marginTop: 15 }}
-              className={`${commonStyles["text-color-processing"]} ${commonStyles["border-color-processing"]}  ${styles.hoverTransparancy}`}
+              className={`${commonStyles["text-color-white"]} ${commonStyles["border-color-white"]}  ${styles.hoverTransparancy}`}
               onClick={() => {
                 registerEvent(
                   ga.EVENT_CATEGORY_BUTTON_CLICK,

@@ -16,7 +16,10 @@ import Feat1 from "./svg-icons/Feat1";
 import feat1 from "~/assets/lottie-animation/feat-1-invoicing.json";
 import feat2 from "~/assets/lottie-animation/feat-2-ai.json";
 import Feat2 from "./svg-icons/Feat2";
-import Graphics2 from '~/assets/graphics-2.png'
+import Graphics3 from "~/assets/graphics-3.png";
+import Graphics5 from "~/assets/graphics-5.png";
+import Graphics6 from "~/assets/graphics-6.png";
+import Graphics7 from "~/assets/graphics-7.png";
 
 const features = [
   {
@@ -92,7 +95,9 @@ export default function FeatureBlock({ className, showSignupModal }: any) {
       {(matches) => {
         return (
           <Row className={cx(className, styles.featureBlock)} id="features">
-            <img className={styles.featGraphics2} src={Graphics2} />
+            {/* <img className={styles.featGraphics5} src={Graphics5} /> */}
+            <img className={styles.featGraphics6} src={Graphics6} />
+            <img className={styles.featGraphics7} src={Graphics7} />
             <Col sm={24} md={24} lg={24} xl={24} xxl={24}>
               <div className={styles.HeadLineFeaturesBlock}>
                 Why <span className={styles.primaryTextColor}>Cheqd ?</span> but
@@ -122,6 +127,9 @@ export default function FeatureBlock({ className, showSignupModal }: any) {
                     xxl={8}
                     className={styles.featureItemIllust}
                   >
+                     {idx === 0 && (
+                      <img className={styles.featGraphics2} src={Graphics3} />
+                    )}
                     {
                       <div
                         className={`${styles.featureBackGraphics} ${

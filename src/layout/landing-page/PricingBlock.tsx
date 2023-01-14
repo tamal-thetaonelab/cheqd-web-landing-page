@@ -5,6 +5,7 @@ import localstyles from "./LandingPageLayout.module.css";
 import Currency from "~/component/Currency";
 import { registerEvent } from "~/analytics";
 import cx from "classnames";
+import Graphics8 from '~/assets/graphics-8.png'
 
 import * as ga from "~/contants/gaConstants";
 
@@ -103,6 +104,7 @@ function PricingBlock({ className, showSignupModal }: any) {
 
   return (
     <Row className={cx(className, localstyles.blockWrapPricing)} id="pricing">
+      <img className={localstyles.featGraphics8} src={Graphics8} />
       <Col flex={1} sm={24} md={24} lg={24}>
         <div className={localstyles.HeadLineFeaturesBlock}>Pricing</div>
         <Space

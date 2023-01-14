@@ -10,6 +10,8 @@ import PoulomiImage from "~/assets/testimonials/poulomi.webp";
 import RajaImage from "~/assets/testimonials/raja-bhowmick.webp";
 import DeepImage from "~/assets/testimonials/deep-biswas.webp";
 import { registerEvent } from "~/analytics";
+import Graphics7 from "~/assets/graphics-7.png";
+import Graphics2 from "~/assets/graphics-2.png";
 
 import * as ga from "~/contants/gaConstants";
 
@@ -49,6 +51,8 @@ export default function Testimonials({ className, showSignupModal }: any) {
     <IMTMediaQueries>
       {(matches) => (
         <Row className={cx(className, styles.blockWrapTestimonials)}>
+          <img className={styles.featGraphics7} src={Graphics7} />
+          <img className={styles.featGraphicsTestim} src={Graphics2} />
           {/* <Col
             flex={1}
             sm={24}
@@ -95,9 +99,7 @@ export default function Testimonials({ className, showSignupModal }: any) {
               autoplay={true}
             >
               {testimonials.map((v) => (
-                <div
-                  key={Math.random()}
-                >
+                <div key={Math.random()}>
                   <div className={styles.testimonialCard}>
                     {matches.md && (
                       <div className={styles.testimonialCardLeft}>
@@ -162,6 +164,15 @@ export default function Testimonials({ className, showSignupModal }: any) {
           {/* <div style={{ position: "absolute", bottom: -10, right: 20 }}>
             <Illustration2 />
           </div> */}
+          <Col span={24}>
+            <Space direction="vertical" size={10}>
+              <div className={styles.testimonialUserCount}> 150+ </div>
+              <div className={styles.testimonialUserCountSub}>
+                {" "}
+                users and counting ...
+              </div>
+            </Space>
+          </Col>
         </Row>
       )}
     </IMTMediaQueries>
