@@ -121,7 +121,7 @@ function PricingBlock({ className, showSignupModal }: any) {
                   <div className={localstyles.pricingBlockItemHeaderPlanName}>
                     {plan.name}
                   </div>
-                  <div className={localstyles.pricingBlockItemHeaderPlanDesc}>
+                  <div className={localstyles.pricingBlockItemHeaderPlanDescription}>
                     {plan.description}
                   </div>
                 </div>
